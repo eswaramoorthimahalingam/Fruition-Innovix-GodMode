@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { Toaster } from "@/components/ui/sonner";
+import { SpaceBackground } from "@/components/site/atoms";
 
 function NotFoundComponent() {
   return (
@@ -83,7 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Fruition Innovix" },
       {
         property: "og:description",
-        content: "Where Innovation Meets Strategy. Your one-stop creative & digital solutions partner.",
+        content:
+          "Where Innovation Meets Strategy. Your one-stop creative & digital solutions partner.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -120,7 +122,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <SpaceBackground />
+      <main className="site-shell">
+        <Outlet />
+      </main>
       <Toaster />
     </QueryClientProvider>
   );

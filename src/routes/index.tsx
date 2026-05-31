@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import heroImg from "@/assets/landing-bg.png";
-import logoImg from "@/assets/logo.jpeg";
+import logoFullImg from "@/assets/logo-removebg.png";
+import logoMarkImg from "@/assets/logo-removebg1.png";
 import techStackImg from "@/assets/tech-stack.png";
 import { Navbar } from "@/components/site/Navbar";
 import {
@@ -45,19 +45,19 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Fruition Innovix — Creative & Digital Solutions Partner" },
+      { title: "Fruition Innovix — Technology, Branding & Business Growth" },
       {
         name: "description",
         content:
-          "Fruition Innovix is your one-stop creative and digital solutions partner — web & mobile apps, ERP/CRM, graphic design, digital marketing, branding, and more.",
+          "Fruition Innovix helps startups, entrepreneurs, and businesses grow with technology solutions, creative branding, digital marketing, ecommerce success, and business consulting.",
       },
       { property: "og:title", content: "Fruition Innovix" },
       {
         property: "og:description",
         content:
-          "Where Innovation Meets Strategy. Your one-stop creative & digital solutions partner.",
+          "Innovate. Create. Grow. Your one-stop partner for technology, branding, and business growth.",
       },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: logoFullImg },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -72,163 +72,307 @@ export const Route = createFileRoute("/")({
 
 const specialties = [
   {
-    title: "Web & Mobile Apps",
-    desc: "Full-stack web and mobile applications built for performance, scale, and growth.",
+    title: "Website Development",
+    desc: "Professional, responsive, and SEO-friendly websites designed to convert visitors into customers.",
     Icon: Monitor,
     color: "oklch(0.55 0.18 250)",
     glow: "oklch(0.55 0.18 250 / 0.35)",
   },
   {
-    title: "ERP & CRM Solutions",
-    desc: "Streamline your operations with custom enterprise resource and customer management systems.",
-    Icon: Database,
+    title: "Mobile App Development",
+    desc: "Custom Android and iOS applications that deliver seamless user experiences.",
+    Icon: Smartphone,
+    color: "oklch(0.60 0.17 200)",
+    glow: "oklch(0.60 0.17 200 / 0.35)",
+  },
+  {
+    title: "Custom Software Development",
+    desc: "Tailored software solutions that automate operations and improve efficiency.",
+    Icon: Code2,
     color: "oklch(0.55 0.15 170)",
     glow: "oklch(0.55 0.15 170 / 0.35)",
   },
   {
-    title: "Graphic Design",
-    desc: "Compelling visuals and creative assets that make your brand impossible to ignore.",
+    title: "Billing Software Solutions",
+    desc: "Smart billing and inventory management systems for modern businesses.",
+    Icon: Briefcase,
+    color: "oklch(0.68 0.16 95)",
+    glow: "oklch(0.68 0.16 95 / 0.35)",
+  },
+  {
+    title: "ERP & CRM Solutions",
+    desc: "Streamline operations, manage customers effectively, and improve productivity.",
+    Icon: Database,
+    color: "oklch(0.58 0.16 250)",
+    glow: "oklch(0.58 0.16 250 / 0.35)",
+  },
+  {
+    title: "Graphic Design & Branding",
+    desc: "Creative designs that build trust, recognition, and lasting brand value.",
     Icon: Palette,
     color: "oklch(0.60 0.18 320)",
     glow: "oklch(0.60 0.18 320 / 0.35)",
   },
   {
     title: "Digital Marketing",
-    desc: "Data-driven campaigns across SEO, PPC, and content that grow your audience.",
+    desc: "Data-driven marketing strategies that generate quality leads and measurable results.",
     Icon: TrendingUp,
     color: "oklch(0.65 0.16 140)",
     glow: "oklch(0.65 0.16 140 / 0.35)",
   },
   {
-    title: "Business Branding",
-    desc: "Build a powerful brand identity — logo, voice, and strategy — that commands attention.",
-    Icon: Star,
+    title: "Social Media Marketing",
+    desc: "Engaging content and campaigns that grow your audience and strengthen your brand.",
+    Icon: Megaphone,
+    color: "oklch(0.62 0.14 290)",
+    glow: "oklch(0.62 0.14 290 / 0.35)",
+  },
+  {
+    title: "Ecommerce Marketing",
+    desc: "Drive traffic, increase conversions, and maximize online sales.",
+    Icon: ShoppingCart,
     color: "oklch(0.78 0.16 82)",
     glow: "oklch(0.78 0.16 82 / 0.35)",
   },
   {
-    title: "E-commerce Solutions",
-    desc: "Turn your store into a high-converting, seamless shopping experience.",
-    Icon: ShoppingCart,
-    color: "oklch(0.60 0.17 200)",
-    glow: "oklch(0.60 0.17 200 / 0.35)",
+    title: "Product Photography & Video Editing",
+    desc: "Professional visual content that showcases products and enhances brand appeal.",
+    Icon: Video,
+    color: "oklch(0.62 0.15 30)",
+    glow: "oklch(0.62 0.15 30 / 0.35)",
+  },
+  {
+    title: "Business Consulting",
+    desc: "Strategic guidance to help businesses scale, optimize operations, and achieve growth.",
+    Icon: BarChart3,
+    color: "oklch(0.65 0.18 300)",
+    glow: "oklch(0.65 0.18 300 / 0.35)",
   },
 ];
 
 const why = [
   {
     k: "01",
-    t: "End-to-End Solutions",
-    d: "From concept to deployment and beyond — we handle every step of your digital journey.",
+    t: "Complete Business Solutions",
+    d: "From technology development to marketing execution, we handle every aspect of your digital growth journey.",
   },
   {
     k: "02",
-    t: "Innovation-First Approach",
-    d: "We leverage cutting-edge technology and creative thinking to keep your brand ahead.",
+    t: "Customized Strategies",
+    d: "Every business is unique. Our solutions are tailored to your goals, industry, and target audience.",
   },
   {
     k: "03",
-    t: "Custom-Built Software",
-    d: "Every solution tailored precisely to your business needs — no off-the-shelf compromises.",
+    t: "Innovation-Driven Approach",
+    d: "We leverage the latest technologies, creative trends, and marketing strategies to keep your business ahead of the competition.",
   },
   {
     k: "04",
-    t: "Data-Driven Marketing",
-    d: "Campaigns backed by analytics and real insights, not guesswork or generic strategies.",
-  },
-  {
-    k: "05",
-    t: "Proven Track Record",
-    d: "Trusted by brands across industries to deliver results that move the needle.",
+    t: "Focus on Results",
+    d: "Our goal is not just delivering services, but generating measurable growth, leads, sales, and business success.",
   },
 ];
 
 const portfolioItems = [
   {
-    title: "SaaS Dashboard Platform",
-    stack: ["React", "Node.js", "PostgreSQL"],
-    type: "Web Application",
+    title: "Technology Solutions",
+    stack: ["Websites", "Mobile Apps", "ERP / CRM"],
+    desc: "Custom websites, mobile apps, ERP, CRM, billing software, and business automation systems.",
+    type: "What We Deliver",
     color: "oklch(0.55 0.18 250)",
     Icon: Monitor,
   },
   {
-    title: "E-commerce Mobile App",
-    stack: ["React Native", "Firebase"],
-    type: "Mobile App",
+    title: "Creative Branding",
+    stack: ["Logo Design", "Identity", "Packaging"],
+    desc: "Professional logo design, brand identity creation, packaging design, and marketing creatives.",
+    type: "What We Deliver",
     color: "oklch(0.60 0.17 200)",
-    Icon: Smartphone,
+    Icon: Palette,
   },
   {
-    title: "Manufacturing ERP System",
-    stack: ["Next.js", "PostgreSQL", "Docker"],
-    type: "ERP Solution",
+    title: "Digital Marketing Excellence",
+    stack: ["SEO", "Google Ads", "Meta Ads"],
+    desc: "SEO, Google Ads, Meta Ads, social media marketing, and lead generation campaigns.",
+    type: "What We Deliver",
     color: "oklch(0.55 0.15 170)",
-    Icon: Database,
-  },
-  {
-    title: "Brand Identity — Tech Startup",
-    stack: ["Figma", "Illustrator"],
-    type: "Branding",
-    color: "oklch(0.78 0.16 82)",
-    Icon: Star,
-  },
-  {
-    title: "Digital Growth Campaign",
-    stack: ["Google Ads", "Meta", "Analytics"],
-    type: "Digital Marketing",
-    color: "oklch(0.65 0.16 140)",
     Icon: TrendingUp,
   },
   {
-    title: "Healthcare CRM System",
-    stack: ["Vue.js", "Python", "MySQL"],
-    type: "CRM Solution",
-    color: "oklch(0.60 0.18 320)",
-    Icon: Layers,
+    title: "Business Growth Strategies",
+    stack: ["Sales Funnels", "Consulting", "Revenue Plans"],
+    desc: "Data-driven marketing plans, sales funnel development, and revenue-focused consulting.",
+    type: "What We Deliver",
+    color: "oklch(0.78 0.16 82)",
+    Icon: BarChart3,
   },
   {
-    title: "Social Media Strategy",
-    stack: ["Instagram", "LinkedIn", "Meta"],
-    type: "Social Marketing",
+    title: "Ecommerce Success",
+    stack: ["Online Stores", "Marketplaces", "Conversions"],
+    desc: "Online store development, marketplace optimization, product promotion, and conversion enhancement.",
+    type: "What We Deliver",
+    color: "oklch(0.65 0.16 140)",
+    Icon: ShoppingCart,
+  },
+  {
+    title: "Visual Content Creation",
+    stack: ["Photography", "Videos", "Reels"],
+    desc: "Product photography, promotional videos, reels, and professional video editing services.",
+    type: "What We Deliver",
+    color: "oklch(0.60 0.18 320)",
+    Icon: Video,
+  },
+  {
+    title: "End-to-End Support",
+    stack: ["Planning", "Development", "Growth"],
+    desc: "From planning and development to marketing and business growth, all services under one roof.",
+    type: "What We Deliver",
     color: "oklch(0.65 0.18 300)",
-    Icon: Megaphone,
+    Icon: Rocket,
   },
 ];
 
 const processSteps = [
-  { t: "Discovery", d: "Understanding your goals, market, audience, and vision.", Icon: Search },
-  { t: "Strategy", d: "Crafting a clear roadmap aligned with your business needs.", Icon: Rocket },
   {
-    t: "Design",
-    d: "Creating wireframes, visuals, and brand elements that inspire.",
+    t: "Understand",
+    d: "We analyze your business, goals, market, and opportunities.",
+    Icon: Search,
+  },
+  {
+    t: "Strategize",
+    d: "We create a customized roadmap designed to achieve your objectives.",
+    Icon: Rocket,
+  },
+  {
+    t: "Build",
+    d: "Our team develops, designs, and implements the required solutions.",
     Icon: Palette,
   },
   {
-    t: "Development",
-    d: "Building robust, scalable, and high-performance solutions.",
+    t: "Grow",
+    d: "We continuously optimize and support your business for long-term success.",
     Icon: Code2,
   },
-  { t: "Launch", d: "Deploying your product with precision, testing, and care.", Icon: Globe },
-  { t: "Growth", d: "Ongoing support, analytics, optimization, and scaling.", Icon: BarChart3 },
+  {
+    t: "Modernize",
+    d: "We keep your systems, brand, and campaigns aligned with new opportunities.",
+    Icon: Globe,
+  },
+  {
+    t: "Perform",
+    d: "Every solution is measured against leads, sales, efficiency, and sustainable growth.",
+    Icon: BarChart3,
+  },
 ];
 
 const techLogos = [
-  { name: "HTML5", bg: "#E44D26", text: "HTML5" },
-  { name: "CSS3", bg: "#264DE4", text: "CSS3" },
-  { name: "JavaScript", bg: "#F7DF1E", text: "JS", dark: true },
-  { name: "TypeScript", bg: "#3178C6", text: "TS" },
-  { name: "React", bg: "#61DAFB", text: "React", dark: true },
-  { name: "Next.js", bg: "#000000", text: "Next" },
-  { name: "Node.js", bg: "#339933", text: "Node" },
-  { name: "Python", bg: "#3776AB", text: "Py" },
-  { name: "Flutter", bg: "#02569B", text: "Flutter" },
-  { name: "Firebase", bg: "#FFCA28", text: "Firebase", dark: true },
-  { name: "Docker", bg: "#2496ED", text: "Docker" },
-  { name: "PostgreSQL", bg: "#4169E1", text: "PgSQL" },
-  { name: "MongoDB", bg: "#47A248", text: "Mongo" },
-  { name: "Figma", bg: "#F24E1E", text: "Figma" },
-  { name: "AWS", bg: "#FF9900", text: "AWS", dark: true },
-  { name: "GraphQL", bg: "#E535AB", text: "GQL" },
+  { name: "Website Development", bg: "#3178C6", text: "Web" },
+  { name: "Mobile Apps", bg: "#61DAFB", text: "Apps", dark: true },
+  { name: "Custom Software", bg: "#339933", text: "Software" },
+  { name: "Billing Software", bg: "#F7DF1E", text: "Billing", dark: true },
+  { name: "ERP", bg: "#4169E1", text: "ERP" },
+  { name: "CRM", bg: "#47A248", text: "CRM" },
+  { name: "Branding", bg: "#F24E1E", text: "Branding" },
+  { name: "SEO", bg: "#34A853", text: "SEO" },
+  { name: "Google Ads", bg: "#4285F4", text: "Ads" },
+  { name: "Meta Ads", bg: "#0866FF", text: "Meta" },
+  { name: "Social Media", bg: "#E535AB", text: "Social" },
+  { name: "Ecommerce", bg: "#FF9900", text: "Commerce", dark: true },
+  { name: "Photography", bg: "#EC4899", text: "Photo" },
+  { name: "Video Editing", bg: "#A855F7", text: "Video" },
+  { name: "Consulting", bg: "#0F766E", text: "Consulting" },
+  { name: "Automation", bg: "#6D28D9", text: "Automation" },
+];
+
+const storyParagraphs = [
+  "Every successful business starts with a simple idea, and Fruition Innovix is no exception.",
+  "Our journey began with a passion for technology, creativity, and helping businesses establish their presence in the digital world. What started as a single opportunity evolved into a mission to provide complete digital and branding solutions.",
+  "The first project was a business website for a client who wanted to strengthen their online presence. That success created the confidence to take on bigger challenges, including ecommerce websites that helped clients showcase and sell their products online.",
+  "As we collaborated closely with businesses, we realized many needed more than a website. They needed professional branding, packaging design, marketing support, and strategies to attract customers, so the services expanded into brand identities, marketing materials, and social media campaigns.",
+  "With every project, Fruition Innovix gained deeper insight into industries, customer needs, and business growth strategies. Today, the company reflects that journey: passion, innovation, creativity, and a genuine desire to help businesses succeed.",
+  "Our team brings together creative designers, technology experts, marketing strategists, and business consultants who work to transform ideas into modern, scalable, and future-ready solutions.",
+  "We are proud of how far we have come, and we remain focused on the future: continuing to innovate, create, and deliver solutions that help businesses grow and achieve their goals.",
+];
+
+const valuePillars = [
+  {
+    title: "Modernization",
+    desc: "We continuously explore new technologies, trends, and strategies to provide cutting-edge solutions that keep clients ahead of the competition.",
+    Icon: Globe,
+  },
+  {
+    title: "Ingenuity",
+    desc: "Creativity is the foundation of every successful brand, helping businesses build memorable identities and engaging customer experiences.",
+    Icon: PenTool,
+  },
+  {
+    title: "Excellence",
+    desc: "We deliver high-quality solutions with attention to detail, professionalism, and a focus on exceptional results.",
+    Icon: Star,
+  },
+  {
+    title: "Integrity",
+    desc: "We build long-term relationships through transparency, trust, accountability, and ethical business practices.",
+    Icon: Layers,
+  },
+  {
+    title: "Performance",
+    desc: "Every solution is designed to help clients grow stronger, faster, and more successfully.",
+    Icon: BarChart3,
+  },
+];
+
+const industries = [
+  {
+    label: "Retail & Ecommerce",
+    desc: "Enhancing online and offline retail businesses through ecommerce development, digital marketing, and customer engagement strategies.",
+    Icon: ShoppingCart,
+  },
+  {
+    label: "Manufacturing",
+    desc: "Supporting manufacturers with ERP solutions, process automation, inventory management, and digital transformation initiatives.",
+    Icon: Briefcase,
+  },
+  {
+    label: "Healthcare",
+    desc: "Developing secure and efficient digital solutions for clinics, hospitals, healthcare professionals, and wellness brands.",
+    Icon: Phone,
+  },
+  {
+    label: "Education",
+    desc: "Empowering educational institutions, training centers, and e-learning platforms with modern digital tools and marketing solutions.",
+    Icon: Monitor,
+  },
+  {
+    label: "Real Estate",
+    desc: "Helping real estate businesses generate quality leads, showcase properties effectively, and strengthen their online presence.",
+    Icon: MapPin,
+  },
+  {
+    label: "Restaurants & Hospitality",
+    desc: "Driving customer engagement through branding, online promotions, website development, and social media marketing.",
+    Icon: Star,
+  },
+  {
+    label: "Fashion & Apparel",
+    desc: "Building strong fashion brands through ecommerce solutions, creative design, product photography, and performance marketing.",
+    Icon: Palette,
+  },
+  {
+    label: "Startups & Entrepreneurs",
+    desc: "Providing end-to-end support from business branding and website development to growth strategies and digital marketing.",
+    Icon: Rocket,
+  },
+  {
+    label: "Service-Based Businesses",
+    desc: "Helping service providers attract more customers, generate leads, and establish a professional digital presence.",
+    Icon: Megaphone,
+  },
+  {
+    label: "Corporate Organizations",
+    desc: "Delivering scalable software solutions, branding strategies, digital transformation services, and enterprise-level business support.",
+    Icon: Database,
+  },
 ];
 
 function Index() {
@@ -248,19 +392,12 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden vignette">
         <div className="absolute inset-0 -z-10">
-          <img
-            src={heroImg}
-            alt="Fruition Innovix — Creative & Digital Solutions"
-            className="w-full h-full object-cover slow-zoom"
-            width={1920}
-            height={1080}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/10 to-background/80" />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at 50% 40%, transparent 35%, oklch(0.06 0.02 265 / 0.70) 100%)",
+                "radial-gradient(ellipse at 50% 40%, transparent 28%, oklch(0.06 0.02 265 / 0.45) 100%)",
             }}
           />
           <div
@@ -273,8 +410,8 @@ function Index() {
         </div>
         <Particles count={60} />
 
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
-          <Reveal delay={150}>
+        <div className="relative z-10 mx-auto w-full max-w-5xl -translate-y-20 px-6 pt-20 text-center sm:translate-y-0">
+          <Reveal delay={150} className="in">
             <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-5">
               <span className="block underline-gold text-gold-gradient">Fruition</span>
               <span className="block text-foreground/95 italic font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-2">
@@ -283,12 +420,17 @@ function Index() {
             </h1>
           </Reveal>
 
-          <Reveal delay={300}>
+          <Reveal delay={300} className="in">
             <p className="font-display italic text-xl sm:text-2xl md:text-3xl leading-tight text-[var(--brand-cream)]/90 mb-3 max-w-2xl mx-auto">
-              Where Innovation Meets Strategy
+              Innovate. Create. Grow.
             </p>
-            <p className="mt-5 text-[10px] sm:text-xs uppercase tracking-[0.5em] leading-relaxed text-[var(--gold-soft)]">
-              Your One-Stop Digital Partner · Technology & Creativity
+            <p className="mx-auto mt-5 max-w-[21rem] text-[9px] uppercase tracking-[0.26em] leading-relaxed text-[var(--gold-soft)] sm:max-w-none sm:text-xs sm:tracking-[0.5em]">
+              Your One-Stop Partner for Technology, Branding & Business Growth
+            </p>
+            <p className="mx-auto mt-6 max-w-[16rem] text-sm leading-relaxed text-foreground/75 sm:max-w-3xl sm:text-lg">
+              Transform your business with powerful technology, creative branding, and result-driven
+              digital marketing solutions. We help startups, entrepreneurs, and established
+              businesses accelerate growth through digital solutions tailored to their unique goals.
             </p>
           </Reveal>
         </div>
@@ -299,13 +441,13 @@ function Index() {
               href="#gallery"
               className="btn-gold cta-pulse rounded-full px-8 py-3.5 text-sm font-medium tracking-wide uppercase"
             >
-              Explore Our Work
+              Get Started Today
             </a>
             <a
               href="#contact-quick"
               className="btn-outline-gold rounded-full px-8 py-3.5 text-sm font-medium tracking-wide uppercase"
             >
-              Get Free Quote
+              Book a Free Consultation
             </a>
           </div>
         </div>
@@ -315,16 +457,16 @@ function Index() {
       <section id="about" className="relative py-32 px-6">
         <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
-            <div className="relative group">
+            <div className="relative group logo-card">
               <div className="absolute -inset-4 bg-[var(--gold)]/8 blur-3xl rounded-full" />
               <div
                 className="relative overflow-hidden rounded-sm border border-[var(--gold)]/20"
                 style={{ boxShadow: "var(--shadow-cinematic)" }}
               >
                 <img
-                  src={logoImg}
+                  src={logoFullImg}
                   alt="Fruition Innovix logo"
-                  className="img-zoom w-full h-[520px] object-contain bg-white p-6"
+                  className="img-zoom w-full h-[520px] object-contain bg-transparent p-4"
                   loading="lazy"
                   width={1024}
                   height={600}
@@ -336,7 +478,7 @@ function Index() {
                   <Counter to={500} suffix="+" />
                 </div>
                 <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                  Projects Delivered
+                  Growth Projects
                 </div>
               </div>
             </div>
@@ -348,23 +490,35 @@ function Index() {
                 — Who We Are
               </div>
               <h2 className="font-display text-5xl md:text-6xl mb-6 leading-tight">
-                Building digital futures with{" "}
-                <span className="italic text-gold-gradient">innovation & strategy</span>.
+                Empowering businesses for the{" "}
+                <span className="italic text-gold-gradient">digital future</span>.
               </h2>
               <BrandDivider />
               <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-                Fruition Innovix is your one-stop creative and digital solutions partner. We
-                specialize in delivering end-to-end technology and marketing services that help
-                brands grow with{" "}
-                <span className="text-[var(--brand-cream)]">
-                  innovation, technology, and smart strategy
-                </span>
-                .
+                At Fruition Innovix, we are passionate about transforming business ideas into
+                successful digital experiences. As a full-service technology, branding, and digital
+                marketing company, we help businesses navigate the ever-changing digital world with{" "}
+                <span className="text-[var(--brand-cream)]">confidence and innovation</span>.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                From web & mobile app development and custom ERP/CRM solutions to graphic design,
-                digital marketing, business branding, event planning, and video editing — we bring
-                every dimension of your brand to life.
+                We create powerful digital solutions that enable businesses to build stronger
+                brands, streamline operations, connect with customers, and accelerate growth through
+                creativity, technology, and strategic expertise.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
+                Whether it is a high-performing website, custom software, marketing campaign, or
+                memorable brand identity, our goal is to provide the tools and strategies businesses
+                need to stay ahead of the competition.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
+                We partner with startups, entrepreneurs, small businesses, and enterprises to
+                deliver solutions that drive growth, improve efficiency, and create lasting value in
+                both digital and traditional markets.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
+                Every business has unique goals, challenges, and opportunities, so we carefully
+                understand your vision, industry, and objectives before crafting customized
+                solutions for long-term success.
               </p>
 
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-[var(--gold)]/15">
@@ -388,6 +542,84 @@ function Index() {
         </div>
       </section>
 
+      {/* STORY */}
+      <section id="story" className="relative py-28 px-6 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_oklch(0.24_0.08_270_/_0.18),_transparent_58%)]" />
+        </div>
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="mb-14 max-w-4xl">
+              <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
+                — The Story Behind Fruition Innovix
+              </div>
+              <h2 className="font-display text-5xl md:text-6xl mb-6 leading-tight">
+                Built from passion, client trust, and{" "}
+                <span className="text-gold-gradient">continuous learning</span>.
+              </h2>
+              <BrandDivider />
+            </div>
+          </Reveal>
+
+          <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-start">
+            <Reveal delay={120}>
+              <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                {storyParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </Reveal>
+            <Reveal delay={220}>
+              <aside className="relative overflow-hidden rounded-sm border border-[var(--gold)]/25 glass p-8">
+                <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[var(--gold)]/10 blur-3xl" />
+                <div className="logo-mark mb-8 h-20 w-20 overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60">
+                  <img src={logoMarkImg} alt="" className="h-full w-full object-contain p-1.5" />
+                </div>
+                <p className="font-display text-2xl italic leading-snug text-foreground/90">
+                  Thank you to every client who has trusted us to be part of their journey. The best
+                  is yet to come.
+                </p>
+                <div className="gold-divider my-6" />
+                <div className="text-gold-gradient font-display text-2xl">
+                  Jeyashree Ramesh, B.E.
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-[0.32em] text-muted-foreground">
+                  Founder, Fruition Innovix
+                </div>
+              </aside>
+            </Reveal>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                eyebrow: "Our Mission",
+                title: "Where Innovation Meets Opportunity",
+                desc: "Our mission is to empower businesses with innovative technology, creative branding, and strategic marketing solutions that build stronger customer relationships, improve operational efficiency, enhance brand visibility, increase leads, lift conversions, and achieve sustainable growth.",
+              },
+              {
+                eyebrow: "Our Vision",
+                title: "Transforming Ideas Into Success",
+                desc: "To become a trusted global partner for businesses seeking digital transformation, innovation, and sustainable growth by delivering world-class technology, branding, and marketing solutions that create lasting impact.",
+              },
+            ].map((item, i) => (
+              <Reveal key={item.eyebrow} delay={260 + i * 100}>
+                <article className="relative h-full overflow-hidden rounded-sm border border-[var(--gold)]/20 glass p-8 hover-lift">
+                  <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[var(--gold)]/8 blur-3xl" />
+                  <div className="relative text-xs uppercase tracking-[0.35em] text-[var(--gold)]">
+                    {item.eyebrow}
+                  </div>
+                  <h3 className="relative mt-4 font-display text-3xl md:text-4xl text-gold-gradient">
+                    {item.title}
+                  </h3>
+                  <p className="relative mt-5 text-muted-foreground leading-relaxed">{item.desc}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SPECIALTIES — icon-based, no photos */}
       <section id="specialties" className="relative py-32 px-6">
         <div className="absolute inset-0 -z-10">
@@ -400,10 +632,11 @@ function Index() {
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
                 — Our Services
               </div>
-              <h2 className="font-display text-5xl md:text-6xl mb-4">What we excel at</h2>
+              <h2 className="font-display text-5xl md:text-6xl mb-4">Our Core Services</h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
-                Six core disciplines, one mission: building solutions that make your brand thrive.
+                End-to-end technology, branding, marketing, ecommerce, content, and consulting
+                support under one roof.
               </p>
             </div>
           </Reveal>
@@ -458,19 +691,36 @@ function Index() {
           <Reveal>
             <div className="text-center mb-14">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — Technology Stack
+                — Powering Your Business Success
               </div>
               <h2 className="font-display text-4xl md:text-5xl mb-4">
-                Digital solutions built for{" "}
-                <span className="text-gold-gradient">real business momentum</span>
+                Modernization, ingenuity, excellence, integrity, and{" "}
+                <span className="text-gold-gradient">performance</span>
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-base italic font-display">
-                From product development to marketing, we help brands launch, operate, and grow with
-                confidence.
+                We explore new technologies, creative strategies, and measurable execution to keep
+                your business stronger, faster, and future-ready.
               </p>
             </div>
           </Reveal>
+
+          <div className="mb-12 grid gap-5 md:grid-cols-5">
+            {valuePillars.map(({ title, desc, Icon }, i) => (
+              <Reveal key={title} delay={80 + i * 60}>
+                <article className="group h-full rounded-sm border border-[var(--gold)]/15 glass p-5 hover-lift">
+                  <Icon
+                    className="mb-4 h-6 w-6 text-[var(--gold)] transition-transform duration-500 group-hover:scale-110"
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="font-display text-xl text-foreground/95 group-hover:text-gold-gradient">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
 
           <Reveal delay={100}>
             <div
@@ -511,7 +761,7 @@ function Index() {
         </div>
       </section>
 
-      {/* PORTFOLIO / GALLERY — tech project cards */}
+      {/* WHAT WE DELIVER */}
       <section id="gallery" className="relative py-32 px-6">
         <div className="absolute inset-0 -z-10">
           <div className="circuit-grid opacity-25" />
@@ -520,9 +770,11 @@ function Index() {
           <Reveal>
             <div className="text-center mb-20">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — Portfolio
+                — What We Deliver
               </div>
-              <h2 className="font-display text-5xl md:text-6xl mb-4">A showcase of our work</h2>
+              <h2 className="font-display text-5xl md:text-6xl mb-4">
+                Smart digital solutions for every growth stage
+              </h2>
               <BrandDivider />
             </div>
           </Reveal>
@@ -558,6 +810,9 @@ function Index() {
                     <h3 className="font-display text-xl md:text-2xl mb-4 text-foreground group-hover:text-gold-gradient transition-all">
                       {item.title}
                     </h3>
+                    <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                      {item.desc}
+                    </p>
 
                     <div className="flex flex-wrap gap-2">
                       {item.stack.map((tech) => (
@@ -587,10 +842,15 @@ function Index() {
           <Reveal>
             <div className="text-center mb-20">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — Why Choose Us
+                — Why Businesses Choose Fruition Innovix
               </div>
-              <h2 className="font-display text-5xl md:text-6xl mb-4">Five promises we keep</h2>
+              <h2 className="font-display text-5xl md:text-6xl mb-4">
+                Think bigger. Build better. Grow faster.
+              </h2>
               <BrandDivider />
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+                Helping businesses achieve sustainable growth through smart digital solutions.
+              </p>
             </div>
           </Reveal>
 
@@ -624,28 +884,32 @@ function Index() {
           <Reveal>
             <div className="text-center mb-16">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — Get Started
+                — Our Services
               </div>
               <h2 className="font-display text-5xl md:text-6xl mb-4 text-gold-gradient">
-                Our Offerings
+                Services built for complete business growth
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-[var(--brand-cream)]/90 text-lg md:text-xl italic font-display mt-4">
-                Choose your service and reach out for a tailored solution.
+                From business websites to automation, branding, marketing, ecommerce, and
+                consulting.
               </p>
             </div>
           </Reveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { label: "Web Development", Icon: Globe },
+              { label: "Website Development", Icon: Globe },
               { label: "Mobile App Development", Icon: Smartphone },
-              { label: "Billing Software", Icon: Briefcase },
+              { label: "Custom Software Development", Icon: Code2 },
+              { label: "Billing Software Solutions", Icon: Briefcase },
               { label: "ERP & CRM Solutions", Icon: Database },
-              { label: "Graphic Design", Icon: Palette },
+              { label: "Graphic Design & Branding", Icon: Palette },
+              { label: "Digital Marketing", Icon: TrendingUp },
               { label: "Social Media Marketing", Icon: Megaphone },
-              { label: "Business Branding", Icon: Star },
-              { label: "Video Editing", Icon: Video },
+              { label: "Ecommerce Marketing", Icon: ShoppingCart },
+              { label: "Product Photography & Video Editing", Icon: Video },
+              { label: "Business Consulting", Icon: BarChart3 },
             ].map(({ label, Icon }, i) => (
               <Reveal key={label} delay={i * 60}>
                 <a
@@ -694,20 +958,24 @@ function Index() {
               <div className="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[oklch(0.55_0.18_275_/_0.12)] blur-3xl" />
               <div className="pointer-events-none absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[var(--gold)]/8 blur-3xl" />
 
+              <div className="logo-mark mx-auto mb-8 h-20 w-20 overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60">
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain p-1.5" />
+              </div>
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-5">
-                — Custom Solutions
+                — Business Consulting —
               </div>
               <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6">
-                <span className="text-gold-gradient">Whatever your digital vision,</span>
+                <span className="text-gold-gradient">Innovate • Elevate • Accelerate</span>
                 <br />
-                we build it with precision.
+                with future-ready strategy.
               </h2>
               <div className="mx-auto my-6">
                 <BrandDivider />
               </div>
               <p className="max-w-2xl mx-auto text-foreground/75 text-lg leading-relaxed mb-10">
-                At Fruition Innovix, we craft fully customized digital solutions tailored to your
-                business goals, industry, and growth strategy.
+                Whether you are launching a startup, expanding your business, modernizing
+                operations, or building a stronger brand, Fruition Innovix becomes an extension of
+                your business.
               </p>
 
               <a
@@ -747,30 +1015,32 @@ function Index() {
           <Reveal>
             <div className="text-center mb-20">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — What We Deliver
+                — More Than a Service Provider
               </div>
               <h2 className="font-display text-5xl md:text-6xl mb-4 text-gold-gradient">
-                Pulse of Innovation
+                We work alongside your business
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-[var(--brand-cream)]/90 text-lg md:text-xl italic font-display mt-4">
-                Every project carries a purpose.
+                Understand your goals.
                 <br />
-                Every solution drives real business impact.
+                Solve challenges, identify opportunities, and create strategies for sustainable
+                success.
               </p>
             </div>
           </Reveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { label: "Custom web & mobile app development", Icon: Code2 },
-              { label: "Enterprise ERP & CRM solutions", Icon: Database },
-              { label: "Creative graphic design & branding", Icon: Palette },
-              { label: "Performance digital marketing", Icon: TrendingUp },
-              { label: "Social media management & growth", Icon: Megaphone },
-              { label: "E-commerce platform development", Icon: ShoppingCart },
-              { label: "Marketing & sales strategy consulting", Icon: BarChart3 },
-              { label: "Professional video editing & production", Icon: Video },
+              { label: "Comprehensive technology and digital solutions", Icon: Code2 },
+              { label: "Creative branding and design expertise", Icon: Palette },
+              { label: "Customized business growth strategies", Icon: BarChart3 },
+              { label: "Results-driven marketing approach", Icon: TrendingUp },
+              { label: "Affordable and scalable services", Icon: Layers },
+              { label: "Dedicated client support", Icon: Phone },
+              { label: "Industry-focused solutions", Icon: Briefcase },
+              { label: "Long-term partnership mindset", Icon: Star },
+              { label: "Commitment to innovation and excellence", Icon: Rocket },
             ].map(({ label, Icon }, i) => (
               <Reveal key={label} delay={i * 70}>
                 <article className="group relative h-full glass rounded-sm p-7 border border-[var(--gold)]/25 hover-lift overflow-hidden">
@@ -807,6 +1077,54 @@ function Index() {
         </div>
       </section>
 
+      {/* INDUSTRIES */}
+      <section id="industries" className="relative py-32 px-6 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <div className="circuit-grid opacity-20" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_oklch(0.24_0.08_270_/_0.16),_transparent_64%)]" />
+        </div>
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="text-center mb-20">
+              <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
+                — Industries We Serve
+              </div>
+              <h2 className="font-display text-5xl md:text-6xl mb-4">
+                Tailored solutions across business sectors
+              </h2>
+              <BrandDivider />
+              <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
+                We help businesses streamline operations, strengthen brand presence, and achieve
+                sustainable growth across a wide range of industries.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {industries.map(({ label, desc, Icon }, i) => (
+              <Reveal key={label} delay={i * 45}>
+                <article className="group relative h-full overflow-hidden rounded-sm border border-[var(--gold)]/15 glass p-5 hover-lift">
+                  <Icon
+                    className="mb-4 h-6 w-6 text-[var(--gold)] transition-transform duration-500 group-hover:scale-110"
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="font-display text-xl leading-snug text-foreground/95 group-hover:text-gold-gradient">
+                    {label}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={260}>
+            <p className="mx-auto mt-12 max-w-3xl text-center text-lg leading-relaxed text-[var(--brand-cream)]/85">
+              No matter your industry, Fruition Innovix delivers customized solutions designed to
+              help your business innovate, grow, and succeed.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section id="process" className="relative py-32 px-6 overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -818,10 +1136,11 @@ function Index() {
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
                 — Our Process
               </div>
-              <h2 className="font-display text-5xl md:text-6xl mb-4">From idea to impact</h2>
+              <h2 className="font-display text-5xl md:text-6xl mb-4">From idea to success</h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-lg mt-4">
-                Six focused steps — every project follows our proven path to success.
+                We understand, strategize, build, and continuously optimize your business for
+                long-term growth.
               </p>
             </div>
           </Reveal>
@@ -929,20 +1248,23 @@ function Index() {
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <div className="text-center mb-12">
+              <div className="logo-mark mx-auto mb-8 h-20 w-20 overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60">
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain p-1.5" />
+              </div>
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-5">
                 — Contact Us —
               </div>
               <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6">
                 <span className="text-gold-gradient">Let's build your digital future</span>
                 <br />
-                together with innovation.
+                together.
               </h2>
               <div className="mx-auto my-6">
                 <BrandDivider />
               </div>
               <p className="max-w-2xl mx-auto text-foreground/75 text-lg leading-relaxed">
-                At Fruition Innovix, we bring your ideas to life with cutting-edge technology,
-                creative design, and smart marketing strategy.
+                Share your idea, business challenge, or growth goal. We will help you shape the
+                right technology, branding, marketing, and consulting plan.
               </p>
             </div>
           </Reveal>
@@ -1106,12 +1428,17 @@ function Index() {
       {/* FOOTER */}
       <footer className="relative py-14 px-6 border-t border-[var(--gold)]/15">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="text-center md:text-left">
-            <div className="font-display text-3xl text-gold-gradient">Fruition</div>
-            <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              Innovix — Digital Solutions
-            </div>
-          </div>
+          <a href="#top" className="group flex items-center gap-4 text-center md:text-left">
+            <span className="logo-orbit relative grid h-14 w-14 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60">
+              <img src={logoMarkImg} alt="" className="h-full w-full object-contain p-1" />
+            </span>
+            <span>
+              <span className="block font-display text-3xl text-gold-gradient">Fruition</span>
+              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Innovix — Where Innovation Meets Strategy
+              </span>
+            </span>
+          </a>
           <div className="flex items-center gap-3">
             {[
               {
@@ -1137,7 +1464,9 @@ function Index() {
           <div className="text-xs text-muted-foreground tracking-wider text-center md:text-right">
             © {new Date().getFullYear()} Fruition Innovix.
             <br />
-            Built with innovation & smart strategy.
+            Innovate • Elevate • Accelerate.
+            <br />
+            Empowering Businesses with Future-Ready Technology and Strategic Excellence.
           </div>
         </div>
       </footer>

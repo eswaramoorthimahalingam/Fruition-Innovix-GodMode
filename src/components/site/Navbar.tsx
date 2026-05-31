@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import logoMarkImg from "@/assets/logo-removebg1.png";
 
 const links = [
   { href: "#top", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#specialties", label: "Services" },
-  { href: "#gallery", label: "Portfolio" },
-  { href: "#order", label: "Get Started" },
-  { href: "#echoes", label: "Solutions" },
+  { href: "#why", label: "Why Us" },
+  { href: "#industries", label: "Industries" },
+  { href: "#process", label: "Process" },
   { href: "#contact-quick", label: "Contact" },
 ];
 
@@ -15,13 +16,14 @@ const sectionGroups = [
   { id: "about", activeId: "about" },
   { id: "specialties", activeId: "specialties" },
   { id: "tech", activeId: "specialties" },
-  { id: "gallery", activeId: "gallery" },
-  { id: "why", activeId: "gallery" },
-  { id: "order", activeId: "order" },
-  { id: "custom-order", activeId: "order" },
-  { id: "echoes", activeId: "echoes" },
-  { id: "process", activeId: "echoes" },
-  { id: "testimonials", activeId: "echoes" },
+  { id: "gallery", activeId: "specialties" },
+  { id: "why", activeId: "why" },
+  { id: "order", activeId: "specialties" },
+  { id: "custom-order", activeId: "specialties" },
+  { id: "echoes", activeId: "specialties" },
+  { id: "industries", activeId: "industries" },
+  { id: "process", activeId: "process" },
+  { id: "testimonials", activeId: "about" },
   { id: "contact-quick", activeId: "contact-quick" },
 ];
 
@@ -117,11 +119,29 @@ export function Navbar() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className={`mx-auto max-w-7xl px-6 transition-all duration-500`}>
+      <div className="mx-auto max-w-7xl px-6 transition-all duration-500">
         <div
-          className={`relative flex items-center justify-center rounded-full px-5 py-3 ${scrolled ? "glass" : ""}`}
+          className={`relative flex items-center gap-5 rounded-full px-4 py-2.5 ${scrolled ? "glass" : ""}`}
         >
-          <nav className="hidden md:flex items-center justify-center gap-9 text-base lg:text-lg">
+          <a href="#top" className="group flex shrink-0 items-center gap-3" aria-label="Home">
+            <span className="logo-orbit relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60 shadow-[0_0_32px_-12px_oklch(0.78_0.16_82_/_0.8)]">
+              <img
+                src={logoMarkImg}
+                alt=""
+                className="h-full w-full object-contain p-1 transition-transform duration-700 group-hover:scale-110"
+              />
+            </span>
+            <span className="hidden lg:block">
+              <span className="block font-display text-xl leading-none text-gold-gradient">
+                Fruition
+              </span>
+              <span className="mt-1 block text-[10px] uppercase tracking-[0.32em] text-foreground/60">
+                Innovix
+              </span>
+            </span>
+          </a>
+
+          <nav className="ml-auto hidden items-center justify-center gap-6 text-base md:flex">
             {links.map((l) => {
               const id = l.href.slice(1);
               const isActive = activeId === id;
@@ -146,13 +166,14 @@ export function Navbar() {
             })}
             <a
               href="#contact-quick"
-              className="inline-flex btn-gold rounded-full px-6 py-2.5 text-base lg:text-lg font-medium"
+              className="inline-flex btn-gold rounded-full px-6 py-2.5 text-base font-medium"
             >
-              Enquire
+              Free Consultation
             </a>
           </nav>
+
           <button
-            className="md:hidden ml-auto text-[var(--gold)] p-2"
+            className="ml-auto p-2 text-[var(--gold)] md:hidden"
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -168,6 +189,7 @@ export function Navbar() {
             </svg>
           </button>
         </div>
+
         {open && (
           <div className="md:hidden mt-2 glass rounded-2xl p-4 flex flex-col gap-3">
             {links.map((l) => {
@@ -193,7 +215,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-gold rounded-full px-5 py-2 text-sm font-medium text-center mt-2"
             >
-              Enquire
+              Free Consultation
             </a>
           </div>
         )}

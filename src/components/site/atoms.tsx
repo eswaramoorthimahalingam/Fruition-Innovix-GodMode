@@ -1,5 +1,158 @@
 import { useEffect, useRef, useState } from "react";
 
+export function SpaceBackground() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const pointer = { x: 0, y: 0 };
+    const stars: Array<{
+      x: number;
+      y: number;
+      z: number;
+      radius: number;
+      speed: number;
+      alpha: number;
+      phase: number;
+      hue: string;
+      streak: number;
+    }> = [];
+
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+    let frame = 0;
+    let lastTime = 0;
+
+    const seedStar = (initial = false) => ({
+      x: initial ? Math.random() * width : -24 - Math.random() * width * 0.08,
+      y: Math.random() * height,
+      z: 0.35 + Math.random() * 1.75,
+      radius: Math.random() > 0.88 ? 0.65 + Math.random() * 1.15 : 0.18 + Math.random() * 0.72,
+      speed: 0.045 + Math.random() * 0.155,
+      alpha: 0.2 + Math.random() * 0.8,
+      phase: Math.random() * Math.PI * 2,
+      hue:
+        Math.random() > 0.9
+          ? "255, 222, 150"
+          : Math.random() > 0.78
+            ? "172, 190, 255"
+            : "238, 246, 255",
+      streak: Math.random() > 0.86 ? 8 + Math.random() * 24 : 0,
+    });
+
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const targetCount = Math.min(1850, Math.max(620, Math.floor((width * height) / 760)));
+      stars.length = 0;
+      for (let i = 0; i < targetCount; i += 1) {
+        stars.push(seedStar(true));
+      }
+    };
+
+    const onPointerMove = (event: PointerEvent) => {
+      pointer.x = (event.clientX / width - 0.5) * 2;
+      pointer.y = (event.clientY / height - 0.5) * 2;
+    };
+
+    const draw = (time = 0) => {
+      const delta = Math.min(34, time - lastTime || 16);
+      lastTime = time;
+
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < stars.length; i += 1) {
+        const star = stars[i];
+        if (!prefersReducedMotion) {
+          star.x += star.speed * delta * star.z;
+          star.y += Math.sin(time * 0.001 + star.phase) * 0.012 * star.z;
+        }
+
+        if (star.x > width + 48 || star.y < -30 || star.y > height + 30) {
+          stars[i] = seedStar();
+          continue;
+        }
+
+        const driftX = Math.sin(time * 0.00035 + star.phase) * 3 * star.z + pointer.x * 6 * star.z;
+        const driftY = pointer.y * 3 * star.z;
+        const twinkle = 0.72 + Math.sin(time * 0.0022 + star.phase) * 0.28;
+        const alpha = Math.max(0.1, star.alpha * twinkle);
+        const radius = star.radius * star.z;
+        const x = star.x + driftX;
+        const y = star.y + driftY;
+
+        if (star.streak && !prefersReducedMotion) {
+          const gradient = ctx.createLinearGradient(x - star.streak * star.z, y, x, y);
+          gradient.addColorStop(0, `rgba(${star.hue}, 0)`);
+          gradient.addColorStop(1, `rgba(${star.hue}, ${alpha * 0.34})`);
+          ctx.strokeStyle = gradient;
+          ctx.lineWidth = Math.max(0.35, radius * 0.42);
+          ctx.beginPath();
+          ctx.moveTo(x - star.streak * star.z, y);
+          ctx.lineTo(x, y);
+          ctx.stroke();
+        }
+
+        ctx.fillStyle = `rgba(${star.hue}, ${alpha})`;
+        ctx.shadowBlur = radius > 1.75 ? 6 : 0;
+        ctx.shadowColor = `rgba(${star.hue}, ${alpha})`;
+
+        if (radius < 0.85) {
+          const size = Math.max(0.45, radius);
+          ctx.fillRect(x, y, size, size);
+        } else {
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      ctx.shadowBlur = 0;
+
+      if (!prefersReducedMotion) {
+        frame = requestAnimationFrame(draw);
+      }
+    };
+
+    resize();
+    draw();
+
+    window.addEventListener("resize", resize);
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+
+    if (!prefersReducedMotion) {
+      frame = requestAnimationFrame(draw);
+    }
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("pointermove", onPointerMove);
+    };
+  }, []);
+
+  return (
+    <div className="space-background" aria-hidden="true">
+      <canvas ref={canvasRef} className="space-background__canvas" />
+      <div className="space-background__dust" />
+    </div>
+  );
+}
+
 export function Particles({ count = 35 }: { count?: number }) {
   const particles = Array.from({ length: count });
   return (
