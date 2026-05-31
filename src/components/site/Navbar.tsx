@@ -56,7 +56,7 @@ export function Navbar() {
             lockedNav ? "navbar-shell--locked" : ""
           }`}
         >
-          <Link to="/" className="group flex shrink-0 items-center gap-3" aria-label="Home">
+          <Link to="/" className="group flex shrink-0 items-center gap-4 pr-1" aria-label="Home">
             <span className="nav-logo-animated logo-orbit relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60 shadow-[0_0_32px_-12px_oklch(0.78_0.16_82_/_0.8)]">
               <img
                 src={logoMarkImg}
@@ -64,17 +64,17 @@ export function Navbar() {
                 className="h-full w-full object-contain p-1 transition-transform duration-700 group-hover:scale-110"
               />
             </span>
-            <span className="hidden sm:block lg:hidden xl:block">
-              <span className="block font-display text-xl leading-none text-gold-gradient">
+            <span className="hidden min-w-[7.8rem] sm:block lg:hidden xl:block">
+              <span className="block font-display text-[1.35rem] leading-[0.9] text-gold-gradient">
                 Fruition
               </span>
-              <span className="mt-1 block text-[10px] uppercase tracking-[0.32em] text-white/90">
+              <span className="mt-1.5 block text-[10px] uppercase tracking-[0.38em] text-white/90">
                 Innovix
               </span>
             </span>
           </Link>
 
-          <nav className="ml-auto hidden items-center justify-center gap-4 text-sm lg:flex xl:gap-6 xl:text-base">
+          <nav className="ml-auto hidden items-center justify-center gap-3 text-sm lg:flex xl:gap-5 xl:text-base">
             {links.map((link) => {
               const isActive = pathname === link.to;
 

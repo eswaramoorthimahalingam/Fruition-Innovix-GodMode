@@ -284,16 +284,6 @@ const techLogos = [
   { name: "Automation", bg: "#6D28D9", text: "Automation" },
 ];
 
-const storyParagraphs = [
-  "Every successful business starts with a simple idea, and Fruition Innovix is no exception.",
-  "Our journey began with a passion for technology, creativity, and helping businesses establish their presence in the digital world. What started as a single opportunity evolved into a mission to provide complete digital and branding solutions.",
-  "The first project was a business website for a client who wanted to strengthen their online presence. That success created the confidence to take on bigger challenges, including ecommerce websites that helped clients showcase and sell their products online.",
-  "As we collaborated closely with businesses, we realized many needed more than a website. They needed professional branding, packaging design, marketing support, and strategies to attract customers, so the services expanded into brand identities, marketing materials, and social media campaigns.",
-  "With every project, Fruition Innovix gained deeper insight into industries, customer needs, and business growth strategies. Today, the company reflects that journey: passion, innovation, creativity, and a genuine desire to help businesses succeed.",
-  "Our team brings together creative designers, technology experts, marketing strategists, and business consultants who work to transform ideas into modern, scalable, and future-ready solutions.",
-  "We are proud of how far we have come, and we remain focused on the future: continuing to innovate, create, and deliver solutions that help businesses grow and achieve their goals.",
-];
-
 const valuePillars = [
   {
     title: "Modernization",
@@ -390,7 +380,7 @@ function Index() {
       />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden vignette">
+      <section className="relative min-h-screen overflow-hidden vignette">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/10 to-background/80" />
           <div
@@ -410,46 +400,58 @@ function Index() {
         </div>
         <Particles count={60} />
 
-        <div className="relative z-10 mx-auto w-full max-w-5xl -translate-y-20 px-6 pt-20 text-center sm:translate-y-0">
+        <div className="hero-stage relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-end px-6 pb-20 pt-44 text-center sm:pb-24 sm:pt-52 lg:pb-28 lg:pt-60">
           <Reveal delay={150} className="in">
-            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-5">
-              <span className="block underline-gold text-gold-gradient">Fruition</span>
-              <span className="block text-foreground/95 italic font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-2">
-                Innovix
-              </span>
-            </h1>
+            <div className="hero-brand-lockup mx-auto flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">
+              <h1 className="hero-brand-title font-display text-6xl leading-[0.9] sm:text-7xl md:text-left md:text-8xl lg:text-9xl">
+                <span className="block underline-gold text-gold-gradient">Fruition</span>
+                <span className="mt-2 block text-5xl font-light italic text-foreground/95 sm:text-6xl md:text-7xl lg:text-8xl">
+                  Innovix
+                </span>
+              </h1>
+              <div
+                className="hero-brand-logo logo-hero relative grid h-36 w-36 shrink-0 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/45 bg-black/55 p-3 sm:h-44 sm:w-44 md:h-52 md:w-52 lg:h-60 lg:w-60"
+                aria-hidden="true"
+              >
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" />
+              </div>
+            </div>
           </Reveal>
 
           <Reveal delay={300} className="in">
-            <p className="font-display italic text-xl sm:text-2xl md:text-3xl leading-tight text-[var(--brand-cream)]/90 mb-3 max-w-2xl mx-auto">
-              Innovate. Create. Grow.
-            </p>
-            <p className="mx-auto mt-5 max-w-[21rem] text-[9px] uppercase tracking-[0.26em] leading-relaxed text-[var(--gold-soft)] sm:max-w-none sm:text-xs sm:tracking-[0.5em]">
-              Your One-Stop Partner for Technology, Branding & Business Growth
-            </p>
-            <p className="mx-auto mt-6 max-w-[16rem] text-sm leading-relaxed text-foreground/75 sm:max-w-3xl sm:text-lg">
-              Transform your business with powerful technology, creative branding, and result-driven
-              digital marketing solutions. We help startups, entrepreneurs, and established
-              businesses accelerate growth through digital solutions tailored to their unique goals.
-            </p>
+            <div className="hero-message mx-auto mt-10 grid w-full max-w-5xl gap-7 py-7 text-center md:grid-cols-[0.82fr_1.18fr] md:items-center md:text-left">
+              <div>
+                <p className="font-display text-2xl italic leading-tight text-[var(--brand-cream)]/92 sm:text-3xl md:text-4xl">
+                  Innovate. Create. Grow.
+                </p>
+                <p className="mt-5 text-[9px] uppercase leading-relaxed tracking-[0.26em] text-[var(--gold-soft)] sm:text-xs sm:tracking-[0.42em]">
+                  Your One-Stop Partner for Technology, Branding & Business Growth
+                </p>
+              </div>
+              <div className="hero-copy-panel md:border-l md:border-[var(--gold)]/20 md:pl-8 lg:pl-10">
+                <p className="mx-auto max-w-[44rem] text-sm leading-relaxed text-foreground/78 sm:text-lg md:mx-0">
+                  Transform your business with powerful technology, creative branding, and
+                  result-driven digital marketing solutions. We help startups, entrepreneurs, and
+                  established businesses accelerate growth through digital solutions tailored to
+                  their unique goals.
+                </p>
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                  <a
+                    href="#gallery"
+                    className="btn-gold cta-pulse rounded-full px-8 py-3.5 text-sm font-medium uppercase tracking-wide"
+                  >
+                    Get Started Today
+                  </a>
+                  <a
+                    href="#contact-quick"
+                    className="btn-outline-gold rounded-full px-8 py-3.5 text-sm font-medium uppercase tracking-wide"
+                  >
+                    Book a Free Consultation
+                  </a>
+                </div>
+              </div>
+            </div>
           </Reveal>
-        </div>
-
-        <div className="absolute bottom-10 sm:bottom-14 left-1/2 z-10 w-full -translate-x-1/2 px-6">
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#gallery"
-              className="btn-gold cta-pulse rounded-full px-8 py-3.5 text-sm font-medium tracking-wide uppercase"
-            >
-              Get Started Today
-            </a>
-            <a
-              href="#contact-quick"
-              className="btn-outline-gold rounded-full px-8 py-3.5 text-sm font-medium tracking-wide uppercase"
-            >
-              Book a Free Consultation
-            </a>
-          </div>
         </div>
       </section>
 
@@ -548,7 +550,7 @@ function Index() {
                   ].map((item) => (
                     <article
                       key={item.k}
-                      className="relative overflow-hidden rounded-sm border border-[var(--gold)]/18 glass p-5"
+                      className="group relative overflow-hidden rounded-sm border border-[var(--gold)]/18 glass p-5 hover-lift"
                     >
                       <div className="font-display text-sm text-gold-gradient">{item.k}</div>
                       <h3 className="mt-2 font-display text-2xl leading-snug text-foreground">
@@ -560,84 +562,6 @@ function Index() {
                 </div>
               </div>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section id="story" className="relative py-28 px-6 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_oklch(0.24_0.08_270_/_0.18),_transparent_58%)]" />
-        </div>
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <div className="mb-14 max-w-4xl">
-              <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
-                — The Story Behind Fruition Innovix
-              </div>
-              <h2 className="font-display text-5xl md:text-6xl mb-6 leading-tight">
-                Built from passion, client trust, and{" "}
-                <span className="text-gold-gradient">continuous learning</span>.
-              </h2>
-              <BrandDivider />
-            </div>
-          </Reveal>
-
-          <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-start">
-            <Reveal delay={120}>
-              <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {storyParagraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </Reveal>
-            <Reveal delay={220}>
-              <aside className="relative overflow-hidden rounded-sm border border-[var(--gold)]/25 glass p-8">
-                <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[var(--gold)]/10 blur-3xl" />
-                <div className="logo-mark mb-8 h-20 w-20 overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60">
-                  <img src={logoMarkImg} alt="" className="h-full w-full object-contain p-1.5" />
-                </div>
-                <p className="font-display text-2xl italic leading-snug text-foreground/90">
-                  Thank you to every client who has trusted us to be part of their journey. The best
-                  is yet to come.
-                </p>
-                <div className="gold-divider my-6" />
-                <div className="text-gold-gradient font-display text-2xl">
-                  Jeyashree Ramesh, B.E.
-                </div>
-                <div className="mt-1 text-xs uppercase tracking-[0.32em] text-muted-foreground">
-                  Founder, Fruition Innovix
-                </div>
-              </aside>
-            </Reveal>
-          </div>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {[
-              {
-                eyebrow: "Our Mission",
-                title: "Where Innovation Meets Opportunity",
-                desc: "Our mission is to empower businesses with innovative technology, creative branding, and strategic marketing solutions that build stronger customer relationships, improve operational efficiency, enhance brand visibility, increase leads, lift conversions, and achieve sustainable growth.",
-              },
-              {
-                eyebrow: "Our Vision",
-                title: "Transforming Ideas Into Success",
-                desc: "To become a trusted global partner for businesses seeking digital transformation, innovation, and sustainable growth by delivering world-class technology, branding, and marketing solutions that create lasting impact.",
-              },
-            ].map((item, i) => (
-              <Reveal key={item.eyebrow} delay={260 + i * 100}>
-                <article className="relative h-full overflow-hidden rounded-sm border border-[var(--gold)]/20 glass p-8 hover-lift">
-                  <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[var(--gold)]/8 blur-3xl" />
-                  <div className="relative text-xs uppercase tracking-[0.35em] text-[var(--gold)]">
-                    {item.eyebrow}
-                  </div>
-                  <h3 className="relative mt-4 font-display text-3xl md:text-4xl text-gold-gradient">
-                    {item.title}
-                  </h3>
-                  <p className="relative mt-5 text-muted-foreground leading-relaxed">{item.desc}</p>
-                </article>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
