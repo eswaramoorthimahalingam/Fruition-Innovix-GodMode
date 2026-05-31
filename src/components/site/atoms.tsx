@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import logoMarkImg from "@/assets/logo-removebg1.png";
 
 export function SpaceBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -292,20 +293,27 @@ export function LuxuryLoader() {
   if (hide) return null;
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-700 ${gone ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+      className={`loader-scene fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-background transition-opacity duration-700 ${gone ? "pointer-events-none opacity-0" : "opacity-100"}`}
     >
-      <div className="text-center">
-        <div className="font-display text-5xl sm:text-6xl text-gold-gradient tracking-wide animate-pulse">
-          Fruition
-        </div>
-        <div className="text-[10px] uppercase tracking-[0.5em] text-[var(--gold-soft)] mt-2">
-          Innovix
-        </div>
-        <div className="mt-6 mx-auto h-px w-40 overflow-hidden bg-[var(--gold)]/15">
-          <div
-            className="h-full bg-[var(--gold)]"
-            style={{ animation: "loader-bar 1.6s ease-in-out forwards" }}
+      <div className="loader-scene__stars" aria-hidden="true" />
+      <div className="loader-scene__grain" aria-hidden="true" />
+      <div className="loader-lockup relative z-10 flex items-center justify-center gap-5 px-5 sm:gap-7">
+        <div className="loader-logo logo-mark grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/55 p-2 shadow-[0_0_48px_-16px_oklch(0.78_0.16_82_/_0.8)] sm:h-32 sm:w-32">
+          <img
+            src={logoMarkImg}
+            alt="Fruition Innovix"
+            className="loader-logo__image h-full w-full object-contain"
           />
+        </div>
+        <div className="loader-title text-left">
+          <div className="loader-title__gold font-display">Fruition</div>
+          <div className="loader-title__line">
+            <div
+              className="loader-title__progress"
+              style={{ animation: "loader-bar 1.6s ease-in-out forwards" }}
+            />
+          </div>
+          <div className="loader-title__white font-display italic">Innovix</div>
         </div>
       </div>
     </div>

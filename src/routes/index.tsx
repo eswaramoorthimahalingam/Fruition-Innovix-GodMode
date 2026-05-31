@@ -454,38 +454,10 @@ function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative py-32 px-6">
-        <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-center">
+      <section id="about" className="relative px-6 py-28">
+        <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="relative group logo-card">
-              <div className="absolute -inset-4 bg-[var(--gold)]/8 blur-3xl rounded-full" />
-              <div
-                className="relative overflow-hidden rounded-sm border border-[var(--gold)]/20"
-                style={{ boxShadow: "var(--shadow-cinematic)" }}
-              >
-                <img
-                  src={logoFullImg}
-                  alt="Fruition Innovix logo"
-                  className="img-zoom w-full h-[520px] object-contain bg-transparent p-4"
-                  loading="lazy"
-                  width={1024}
-                  height={600}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass rounded-sm px-6 py-4 hidden sm:block">
-                <div className="font-display text-4xl text-gold-gradient">
-                  <Counter to={500} suffix="+" />
-                </div>
-                <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                  Growth Projects
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={200}>
-            <div>
+            <div className="mx-auto mb-14 max-w-4xl text-center md:mb-16">
               <div className="text-xs uppercase tracking-[0.4em] text-[var(--gold)] mb-4">
                 — Who We Are
               </div>
@@ -494,51 +466,101 @@ function Index() {
                 <span className="italic text-gold-gradient">digital future</span>.
               </h2>
               <BrandDivider />
-              <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-                At Fruition Innovix, we are passionate about transforming business ideas into
-                successful digital experiences. As a full-service technology, branding, and digital
-                marketing company, we help businesses navigate the ever-changing digital world with{" "}
-                <span className="text-[var(--brand-cream)]">confidence and innovation</span>.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                We create powerful digital solutions that enable businesses to build stronger
-                brands, streamline operations, connect with customers, and accelerate growth through
-                creativity, technology, and strategic expertise.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                Whether it is a high-performing website, custom software, marketing campaign, or
-                memorable brand identity, our goal is to provide the tools and strategies businesses
-                need to stay ahead of the competition.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                We partner with startups, entrepreneurs, small businesses, and enterprises to
-                deliver solutions that drive growth, improve efficiency, and create lasting value in
-                both digital and traditional markets.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                Every business has unique goals, challenges, and opportunities, so we carefully
-                understand your vision, industry, and objectives before crafting customized
-                solutions for long-term success.
-              </p>
-
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-[var(--gold)]/15">
-                {[
-                  { n: 5, s: "+", l: "Years" },
-                  { n: 500, s: "+", l: "Projects" },
-                  { n: 200, s: "+", l: "Clients" },
-                ].map((s) => (
-                  <div key={s.l}>
-                    <div className="font-display text-4xl text-gold-gradient">
-                      <Counter to={s.n} suffix={s.s} />
-                    </div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mt-1">
-                      {s.l}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </Reveal>
+
+          <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-12">
+            <div className="lg:flex lg:justify-end">
+              <Reveal delay={80}>
+                <div className="w-full max-w-[35rem]">
+                  <div className="relative group logo-card">
+                    <div className="absolute -inset-4 bg-[var(--gold)]/8 blur-3xl rounded-full" />
+                    <div
+                      className="relative overflow-hidden rounded-sm border border-[var(--gold)]/20"
+                      style={{ boxShadow: "var(--shadow-cinematic)" }}
+                    >
+                      <img
+                        src={logoFullImg}
+                        alt="Fruition Innovix logo"
+                        className="img-zoom h-[420px] w-full object-contain bg-transparent p-4 sm:h-[500px]"
+                        loading="lazy"
+                        width={1024}
+                        height={600}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                    </div>
+                  </div>
+
+                  <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[var(--gold)]/18 pt-8">
+                    {[
+                      { n: 5, s: "+", l: "Years" },
+                      { n: 500, s: "+", l: "Projects" },
+                      { n: 200, s: "+", l: "Clients" },
+                    ].map((s) => (
+                      <div key={s.l}>
+                        <div className="font-display text-3xl leading-none text-gold-gradient sm:text-4xl">
+                          <Counter to={s.n} suffix={s.s} />
+                        </div>
+                        <div className="mt-2 text-[10px] uppercase tracking-[0.28em] text-muted-foreground sm:text-xs">
+                          {s.l}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            <Reveal delay={160}>
+              <div className="w-full max-w-[43rem]">
+                <p className="text-xl leading-relaxed text-foreground/88">
+                  At Fruition Innovix, we turn business ideas into polished digital systems,
+                  memorable brands, and growth-focused customer experiences.
+                </p>
+                <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  We combine technology, branding, digital marketing, ecommerce strategy, and
+                  consulting under one roof, so every decision feels connected to your real business
+                  goals.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {[
+                    {
+                      k: "01",
+                      t: "Digital Products",
+                      d: "Websites, mobile apps, ERP, CRM, billing systems, and custom software built for daily use.",
+                    },
+                    {
+                      k: "02",
+                      t: "Brand Identity",
+                      d: "Logo systems, packaging, graphic design, product visuals, and campaigns that make the brand easier to trust.",
+                    },
+                    {
+                      k: "03",
+                      t: "Growth Marketing",
+                      d: "SEO, ads, social media, ecommerce marketing, and performance plans focused on leads and sales.",
+                    },
+                    {
+                      k: "04",
+                      t: "Business Guidance",
+                      d: "Planning, process improvement, automation ideas, and long-term support for sustainable growth.",
+                    },
+                  ].map((item) => (
+                    <article
+                      key={item.k}
+                      className="relative overflow-hidden rounded-sm border border-[var(--gold)]/18 glass p-5"
+                    >
+                      <div className="font-display text-sm text-gold-gradient">{item.k}</div>
+                      <h3 className="mt-2 font-display text-2xl leading-snug text-foreground">
+                        {item.t}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.d}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

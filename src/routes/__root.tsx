@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Toaster } from "@/components/ui/sonner";
 import { SpaceBackground } from "@/components/site/atoms";
+import logoMarkImg from "@/assets/logo-removebg1.png";
 
 function NotFoundComponent() {
   return (
@@ -88,12 +89,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Where Innovation Meets Strategy. Your one-stop creative & digital solutions partner.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: logoMarkImg },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:image", content: logoMarkImg },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: logoMarkImg,
+      },
+      {
+        rel: "apple-touch-icon",
+        href: logoMarkImg,
       },
     ],
   }),
