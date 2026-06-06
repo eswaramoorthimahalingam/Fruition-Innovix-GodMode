@@ -1,0 +1,10 @@
+node_modules
+dist
+.output
+.tanstack
+.vinxi
+Fruition-Innovix-GodMode
+pnpm-lock.yaml
+package-lock.json
+bun.lock
+routeTree.gen.ts
