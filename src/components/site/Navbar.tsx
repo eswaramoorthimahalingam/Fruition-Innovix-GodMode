@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { brandLogo, brandName } from "@/lib/brand-assets";
+import { brandMark, brandName } from "@/lib/brand-assets";
 
 const links = [
   { to: "/", label: "Home", title: "Fruition Innovix - Home" },
@@ -9,10 +9,12 @@ const links = [
   { to: "/why-us", label: "Why Us", title: "Why Choose Fruition Innovix" },
   { to: "/industries", label: "Industries", title: "Industries Fruition Innovix Serves" },
   { to: "/process", label: "Process", title: "Fruition Innovix Process" },
-  { to: "/contact", label: "Contact", title: "Contact Fruition Innovix" },
 ];
 
-const pageTitles = new Map(links.map((link) => [link.to, link.title]));
+const pageTitles = new Map([
+  ...links.map((link) => [link.to, link.title] as const),
+  ["/contact", "Contact Fruition Innovix"] as const,
+]);
 
 export function Navbar() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
@@ -52,29 +54,29 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 transition-all duration-500">
         <div
-          className={`navbar-shell relative flex items-center gap-5 rounded-full px-4 py-2.5 ${
+          className={`navbar-shell relative flex items-center gap-4 rounded-2xl px-3 py-2.5 sm:rounded-full sm:px-4 ${
             lockedNav ? "navbar-shell--locked" : ""
           }`}
         >
-          <Link to="/" className="group flex shrink-0 items-center gap-4 pr-1" aria-label="Home">
-            <span className="nav-logo-animated logo-orbit relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/60 shadow-[0_0_32px_-12px_oklch(0.78_0.16_82_/_0.8)]">
+          <Link to="/" className="group flex shrink-0 items-center gap-3 pr-1" aria-label="Home">
+            <span className="nav-logo-animated relative grid h-11 w-11 place-items-center overflow-hidden rounded-xl border border-[var(--gold)]/35 bg-white p-1 shadow-[0_0_32px_-14px_oklch(0.78_0.16_82_/_0.85)]">
               <img
-                src={brandLogo}
+                src={brandMark}
                 alt={brandName}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
               />
             </span>
-            <span className="hidden min-w-[7.8rem] sm:block lg:hidden xl:block">
-              <span className="block font-display text-[1.35rem] leading-[0.9] text-gold-gradient">
+            <span className="hidden min-w-[7.4rem] sm:block lg:hidden xl:block">
+              <span className="block font-display text-[1.18rem] leading-none text-gold-gradient">
                 Fruition
               </span>
-              <span className="mt-1.5 block text-[10px] uppercase tracking-[0.38em] text-white/90">
+              <span className="mt-1 block text-[9px] uppercase tracking-[0.34em] text-white/85">
                 Innovix
               </span>
             </span>
           </Link>
 
-          <nav className="ml-auto hidden items-center justify-center gap-3 text-sm lg:flex xl:gap-5 xl:text-base">
+          <nav className="ml-auto hidden items-center justify-center gap-3 text-sm lg:flex xl:gap-4">
             {links.map((link) => {
               const isActive = pathname === link.to;
 
@@ -98,14 +100,14 @@ export function Navbar() {
             })}
             <Link
               to="/contact"
-              className="inline-flex btn-gold rounded-full px-4 py-2.5 text-sm font-medium xl:px-6 xl:text-base"
+              className="inline-flex btn-gold rounded-full px-4 py-2.5 text-sm font-medium xl:px-5"
             >
-              Free Consultation
+              Start Project
             </Link>
           </nav>
 
           <button
-            className="ml-auto p-2 text-[var(--gold)] lg:hidden"
+            className="ml-auto rounded-full border border-[var(--gold)]/20 p-2 text-[var(--gold)] lg:hidden"
             onClick={() => setOpen((isOpen) => !isOpen)}
             aria-label="Toggle menu"
             aria-expanded={open}
@@ -147,7 +149,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="btn-gold rounded-full px-5 py-2 text-sm font-medium text-center mt-2"
             >
-              Free Consultation
+              Start Project
             </Link>
           </div>
         )}

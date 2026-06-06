@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { brandLogo, brandName } from "@/lib/brand-assets";
+import { brandMark, brandName } from "@/lib/brand-assets";
 
 export function SpaceBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -283,8 +283,8 @@ export function LuxuryLoader() {
   const [gone, setGone] = useState(false);
   const [hide, setHide] = useState(false);
   useEffect(() => {
-    const t1 = setTimeout(() => setGone(true), 1600);
-    const t2 = setTimeout(() => setHide(true), 2400);
+    const t1 = setTimeout(() => setGone(true), 1050);
+    const t2 = setTimeout(() => setHide(true), 1650);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
@@ -297,12 +297,12 @@ export function LuxuryLoader() {
     >
       <div className="loader-scene__stars" aria-hidden="true" />
       <div className="loader-scene__grain" aria-hidden="true" />
-      <div className="loader-lockup relative z-10 flex items-center justify-center gap-5 px-5 sm:gap-7">
-        <div className="loader-logo logo-mark grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full border border-[var(--gold)]/35 bg-black/55 p-2 shadow-[0_0_48px_-16px_oklch(0.78_0.16_82_/_0.8)] sm:h-32 sm:w-32">
+      <div className="loader-lockup relative z-10 flex items-center justify-center gap-4 px-5 sm:gap-6">
+        <div className="loader-logo grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-2xl border border-[var(--gold)]/35 bg-white p-2 shadow-[0_0_48px_-16px_oklch(0.78_0.16_82_/_0.8)] sm:h-32 sm:w-32">
           <img
-            src={brandLogo}
+            src={brandMark}
             alt={brandName}
-            className="loader-logo__image h-full w-full rounded-full object-cover"
+            className="loader-logo__image h-full w-full object-contain"
           />
         </div>
         <div className="loader-title text-left">
@@ -310,10 +310,11 @@ export function LuxuryLoader() {
           <div className="loader-title__line">
             <div
               className="loader-title__progress"
-              style={{ animation: "loader-bar 1.6s ease-in-out forwards" }}
+              style={{ animation: "loader-bar 1.05s ease-in-out forwards" }}
             />
           </div>
           <div className="loader-title__white font-display italic">Innovix</div>
+          <div className="loader-tagline">Where innovation meets strategy</div>
         </div>
       </div>
     </div>
