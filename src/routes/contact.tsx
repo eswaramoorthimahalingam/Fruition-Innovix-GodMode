@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Fruition Innovix for technology, branding, marketing, ecommerce, and business consulting enquiries.",
+          "Contact Fruition Innovix for technology, branding, marketing, ecommerce, consulting.",
       },
     ],
   }),

@@ -8,8 +8,7 @@ export const Route = createFileRoute("/why-us")({
       { title: "Why Choose Fruition Innovix" },
       {
         name: "description",
-        content:
-          "See why businesses choose Fruition Innovix for complete technology, branding, marketing, ecommerce, and business growth support.",
+        content: "One team for technology, branding, marketing, ecommerce, and growth support.",
       },
     ],
   }),

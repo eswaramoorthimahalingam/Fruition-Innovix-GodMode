@@ -4,32 +4,32 @@ import { FeatureGrid, PageCta, PageFrame, type Feature } from "@/components/site
 const industries: Feature[] = [
   {
     title: "Retail & Ecommerce",
-    desc: "Online stores, marketplace support, promotion, and conversion improvements.",
+    desc: "Stores, marketplaces, promotions, conversion lifts.",
     Icon: ShoppingCart,
   },
   {
     title: "Manufacturing",
-    desc: "ERP, billing, inventory, process automation, and digital transformation support.",
+    desc: "ERP, billing, inventory, automation, reporting.",
     Icon: Briefcase,
   },
   {
     title: "Healthcare",
-    desc: "Secure digital systems and marketing support for clinics, hospitals, and wellness brands.",
+    desc: "Secure systems for clinics, hospitals, wellness brands.",
     Icon: Phone,
   },
   {
     title: "Education",
-    desc: "Websites, learning platforms, admissions funnels, and communication systems.",
+    desc: "Websites, learning platforms, admissions, communication.",
     Icon: Monitor,
   },
   {
     title: "Real Estate",
-    desc: "Lead generation, property showcases, brand presence, and campaign execution.",
+    desc: "Lead funnels, property showcases, campaigns.",
     Icon: MapPin,
   },
   {
     title: "Startups & Entrepreneurs",
-    desc: "Launch support from identity and website to strategy, software, and marketing.",
+    desc: "Identity, website, strategy, software, launch marketing.",
     Icon: Rocket,
   },
 ];
@@ -38,8 +38,8 @@ export function IndustriesPage() {
   return (
     <PageFrame
       eyebrow="Industries We Serve"
-      title="Tailored solutions across business sectors."
-      intro="We adapt technology, branding, marketing, and consulting support to the practical needs of each industry."
+      title="Sector-ready digital solutions."
+      intro="Technology. Branding. Marketing. Consulting. Tuned by industry."
     >
       <FeatureGrid items={industries} />
       <PageCta />

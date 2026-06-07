@@ -292,7 +292,7 @@
       radial-gradient(1.1px 1.1px at 86% 73%, oklch(0.9 0.05 86 / 0.44), transparent),
       radial-gradient(2px 2px at 95% 18%, oklch(1 0 0 / 0.78), transparent);
     background-size: 34rem 22rem;
-    animation: loader-stars-drift 12s linear infinite;
+    animation: loader-stars-drift 28s linear infinite;
   }
 
   .loader-scene__grain {
@@ -761,7 +761,7 @@
       radial-gradient(0.8px 0.8px at 96% 46%, oklch(1 0 0 / 0.62), transparent);
     background-size: 18rem 18rem;
     opacity: 0.38;
-    animation: space-dust-drift 16s linear infinite;
+    animation: space-dust-drift 44s linear infinite;
   }
 
   @keyframes space-dust-drift {
@@ -769,7 +769,7 @@
       transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translate3d(7rem, 0, 0);
+      transform: translate3d(4rem, 0, 0);
     }
   }
 

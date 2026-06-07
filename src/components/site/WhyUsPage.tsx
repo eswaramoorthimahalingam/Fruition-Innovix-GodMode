@@ -4,22 +4,22 @@ import { FeatureGrid, PageCta, PageFrame, type Feature } from "@/components/site
 const why: Feature[] = [
   {
     title: "Complete Business Solutions",
-    desc: "Technology, branding, marketing, ecommerce, consulting, and support under one roof.",
+    desc: "Technology, branding, marketing, ecommerce, consulting, support.",
     Icon: Layers,
   },
   {
     title: "Customized Strategies",
-    desc: "Every plan is shaped around your goals, market, audience, and business stage.",
+    desc: "Goals, market, audience, stage. Then the roadmap.",
     Icon: Search,
   },
   {
     title: "Innovation-Driven Approach",
-    desc: "We keep your systems, brand, and campaigns aligned with new opportunities.",
+    desc: "Modern systems. Fresh campaigns. Practical opportunities.",
     Icon: Rocket,
   },
   {
     title: "Focus on Results",
-    desc: "Our work is built around leads, sales, efficiency, visibility, and sustainable growth.",
+    desc: "Leads, sales, efficiency, visibility, sustainable growth.",
     Icon: Star,
   },
 ];
@@ -29,7 +29,7 @@ export function WhyUsPage() {
     <PageFrame
       eyebrow="Why Businesses Choose Fruition Innovix"
       title="Think bigger. Build better. Grow faster."
-      intro="We combine strategic thinking, creative execution, and technical delivery so your business can scale with fewer scattered vendors and clearer momentum."
+      intro="Strategy. Creative execution. Technical delivery. One clear team."
     >
       <FeatureGrid items={why} />
       <PageCta />

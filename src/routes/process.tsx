@@ -8,8 +8,7 @@ export const Route = createFileRoute("/process")({
       { title: "Fruition Innovix Process" },
       {
         name: "description",
-        content:
-          "Understand Fruition Innovix's project process from discovery and strategy to build, launch, and growth.",
+        content: "Discovery, strategy, build, launch, optimization, growth.",
       },
     ],
   }),

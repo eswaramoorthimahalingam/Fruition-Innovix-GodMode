@@ -36,7 +36,7 @@ export function SpaceBackground() {
       y: Math.random() * height,
       z: 0.35 + Math.random() * 1.75,
       radius: Math.random() > 0.88 ? 0.65 + Math.random() * 1.15 : 0.18 + Math.random() * 0.72,
-      speed: 0.045 + Math.random() * 0.155,
+      speed: 0.014 + Math.random() * 0.046,
       alpha: 0.2 + Math.random() * 0.8,
       phase: Math.random() * Math.PI * 2,
       hue:
@@ -80,7 +80,7 @@ export function SpaceBackground() {
         const star = stars[i];
         if (!prefersReducedMotion) {
           star.x += star.speed * delta * star.z;
-          star.y += Math.sin(time * 0.001 + star.phase) * 0.012 * star.z;
+          star.y += Math.sin(time * 0.0007 + star.phase) * 0.004 * star.z;
         }
 
         if (star.x > width + 48 || star.y < -30 || star.y > height + 30) {

@@ -8,8 +8,7 @@ export const Route = createFileRoute("/services")({
       { title: "Fruition Innovix Services" },
       {
         name: "description",
-        content:
-          "Explore Fruition Innovix services: websites, mobile apps, custom software, ERP, CRM, branding, digital marketing, ecommerce, and consulting.",
+        content: "Websites, apps, software, ERP, CRM, branding, marketing, ecommerce, consulting.",
       },
     ],
   }),

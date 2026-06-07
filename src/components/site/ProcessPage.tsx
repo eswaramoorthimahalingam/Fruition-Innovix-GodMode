@@ -5,22 +5,22 @@ import { PageCta, PageFrame, type Feature } from "@/components/site/PageFrame";
 const process: Feature[] = [
   {
     title: "Understand",
-    desc: "We study your business, goals, market, customers, and current blockers.",
+    desc: "Business. Goals. Market. Customers. Blockers.",
     Icon: Search,
   },
   {
     title: "Strategize",
-    desc: "We shape a roadmap with the right mix of technology, branding, and growth work.",
+    desc: "Roadmap. Priorities. Budget. Timeline.",
     Icon: Rocket,
   },
   {
     title: "Build",
-    desc: "Our team designs, develops, tests, and launches the solution with care.",
+    desc: "Design. Develop. Test. Launch.",
     Icon: Code2,
   },
   {
     title: "Grow",
-    desc: "We optimize campaigns, systems, and operations so your business keeps moving.",
+    desc: "Campaigns. Systems. Operations. Conversion.",
     Icon: TrendingUp,
   },
 ];
@@ -29,8 +29,8 @@ export function ProcessPage() {
   return (
     <PageFrame
       eyebrow="Our Process"
-      title="From idea to success."
-      intro="A simple, focused workflow keeps projects organized from the first conversation through launch and growth."
+      title="Idea to launch. Then growth."
+      intro="Simple workflow. Clear milestones. Organized delivery."
     >
       <div className="mt-16 grid gap-6 md:grid-cols-4">
         {process.map(({ title, desc, Icon }, index) => (

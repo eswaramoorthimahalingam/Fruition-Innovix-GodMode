@@ -7,8 +7,8 @@ export function ContactPage() {
   return (
     <PageFrame
       eyebrow="Contact Us"
-      title="Let's build your digital future together."
-      intro="Share your idea, business challenge, or growth goal. We will help shape the right technology, branding, marketing, or consulting plan."
+      title="Start your next digital move."
+      intro="Idea. Challenge. Growth goal. We shape the right plan."
     >
       <div className="mt-14">
         <EnquiryForm />

@@ -79,14 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Fruition Innovix is your one-stop creative and digital solutions partner — web & mobile apps, ERP/CRM, graphic design, digital marketing, branding, and more.",
+          "Fruition Innovix delivers web, apps, ERP/CRM, branding, marketing, and growth support.",
       },
       { name: "author", content: "Fruition Innovix" },
       { property: "og:title", content: "Fruition Innovix" },
       {
         property: "og:description",
-        content:
-          "Where Innovation Meets Strategy. Your one-stop creative & digital solutions partner.",
+        content: "Where Innovation Meets Strategy. Creative and digital growth support.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: brandLogo },

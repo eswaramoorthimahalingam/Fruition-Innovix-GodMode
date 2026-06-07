@@ -7,41 +7,64 @@ import { brandLogo, brandName } from "@/lib/brand-assets";
 const aboutPillars: Feature[] = [
   {
     title: "Technology",
-    desc: "Websites, mobile apps, software, billing systems, ERP, CRM, and automation.",
+    desc: "Websites. Apps. Software. ERP. CRM. Automation.",
     Icon: Code2,
   },
   {
     title: "Creativity",
-    desc: "Brand identity, graphics, product visuals, campaigns, and content that feels considered.",
+    desc: "Identity. Graphics. Product visuals. Campaign assets.",
     Icon: Palette,
   },
   {
     title: "Growth",
-    desc: "Digital marketing, ecommerce strategy, consulting, and measurable business support.",
+    desc: "Marketing. Ecommerce. Consulting. Measurable support.",
     Icon: TrendingUp,
   },
 ];
 
-const storyParagraphs = [
-  "Every successful business starts with a simple idea, and Fruition Innovix is no exception.",
-  "Our journey began with a passion for technology, creativity, and helping businesses establish their presence in the digital world. What started as a single opportunity evolved into a mission to provide complete digital and branding solutions.",
-  "The first project was a business website for a client who wanted to strengthen their online presence. That success created the confidence to take on bigger challenges, including ecommerce websites that helped clients showcase and sell their products online.",
-  "As we collaborated closely with businesses, we realized many needed more than a website. They needed professional branding, packaging design, marketing support, and strategies to attract customers, so the services expanded into brand identities, marketing materials, and social media campaigns.",
-  "With every project, Fruition Innovix gained deeper insight into industries, customer needs, and business growth strategies. Today, the company reflects that journey: passion, innovation, creativity, and a genuine desire to help businesses succeed.",
-  "Our team brings together creative designers, technology experts, marketing strategists, and business consultants who work to transform ideas into modern, scalable, and future-ready solutions.",
-  "We are proud of how far we have come, and we remain focused on the future: continuing to innovate, create, and deliver solutions that help businesses grow and achieve their goals.",
+const storyBeats = [
+  {
+    k: "01",
+    t: "Simple Start",
+    d: "A business website. A real client need. A clear first win.",
+  },
+  {
+    k: "02",
+    t: "Bigger Builds",
+    d: "Ecommerce stores. Product showcases. Online selling systems.",
+  },
+  {
+    k: "03",
+    t: "Brand Depth",
+    d: "Identity, packaging, marketing materials, social campaigns.",
+  },
+  {
+    k: "04",
+    t: "Growth Lens",
+    d: "Industry insight, customer needs, business strategy.",
+  },
+  {
+    k: "05",
+    t: "Today",
+    d: "Designers, technologists, marketers, consultants. One team.",
+  },
+  {
+    k: "06",
+    t: "Next",
+    d: "Innovate. Create. Deliver. Business growth.",
+  },
 ];
 
 const missionVision = [
   {
     eyebrow: "Our Mission",
     title: "Where Innovation Meets Opportunity",
-    desc: "Our mission is to empower businesses with innovative technology, creative branding, and strategic marketing solutions that build stronger customer relationships, improve operational efficiency, enhance brand visibility, increase leads, lift conversions, and achieve sustainable growth.",
+    desc: "Technology. Branding. Marketing. Stronger relationships. Better efficiency. More leads. Sustainable growth.",
   },
   {
     eyebrow: "Our Vision",
     title: "Transforming Ideas Into Success",
-    desc: "To become a trusted global partner for businesses seeking digital transformation, innovation, and sustainable growth by delivering world-class technology, branding, and marketing solutions that create lasting impact.",
+    desc: "Trusted global partner for digital transformation, innovation, and lasting business impact.",
   },
 ];
 
@@ -49,8 +72,8 @@ export function AboutPage() {
   return (
     <PageFrame
       eyebrow="Who We Are"
-      title="Empowering businesses for the digital future."
-      intro="Fruition Innovix brings technology, creative branding, digital marketing, ecommerce support, and business consulting together so businesses can move with clarity and confidence."
+      title="Built for the digital future."
+      intro="Technology. Branding. Marketing. Ecommerce. Consulting. One focused partner."
     >
       <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1fr] lg:items-center">
         <Reveal delay={120}>
@@ -63,16 +86,20 @@ export function AboutPage() {
           </div>
         </Reveal>
         <Reveal delay={180}>
-          <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
-            <p>
-              We started with the belief that good digital work should feel practical, elegant, and
-              useful. Today that shows up in websites, apps, brand identities, marketing campaigns,
-              ecommerce growth plans, and custom business systems.
-            </p>
-            <p>
-              Our team works as a partner, not just a vendor: we listen, plan, build, measure, and
-              keep improving the result.
-            </p>
+          <div className="grid gap-4 text-lg leading-relaxed text-foreground/85 sm:grid-cols-2">
+            {[
+              "Practical digital work.",
+              "Elegant brand systems.",
+              "Useful business tools.",
+              "Partner mindset.",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-sm border border-[var(--gold)]/20 glass px-5 py-4 font-display text-2xl text-foreground/90"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>
@@ -84,8 +111,8 @@ export function AboutPage() {
               The Story Behind Fruition Innovix
             </div>
             <h2 className="font-display text-5xl leading-tight md:text-6xl">
-              Built from passion, client trust, and{" "}
-              <span className="text-gold-gradient">continuous learning</span>.
+              Passion. Client trust. <span className="text-gold-gradient">Continuous learning</span>
+              .
             </h2>
             <BrandDivider />
           </div>
@@ -93,9 +120,16 @@ export function AboutPage() {
 
         <div className="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-start">
           <Reveal delay={120}>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              {storyParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {storyBeats.map((beat) => (
+                <article
+                  key={beat.k}
+                  className="relative overflow-hidden rounded-sm border border-[var(--gold)]/20 glass p-5 hover-lift"
+                >
+                  <div className="font-display text-sm text-gold-gradient">{beat.k}</div>
+                  <h3 className="mt-3 font-display text-2xl text-foreground">{beat.t}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{beat.d}</p>
+                </article>
               ))}
             </div>
           </Reveal>
@@ -126,8 +160,7 @@ export function AboutPage() {
                 </div>
               </div>
               <p className="font-display text-2xl italic leading-snug text-foreground/90">
-                Thank you to every client who has trusted us to be part of their journey. The best
-                is yet to come.
+                Client trust. Shared progress. The best is yet to come.
               </p>
             </aside>
           </Reveal>

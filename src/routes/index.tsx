@@ -47,14 +47,12 @@ export const Route = createFileRoute("/")({
       { title: "Fruition Innovix — Technology, Branding & Business Growth" },
       {
         name: "description",
-        content:
-          "Fruition Innovix builds websites, apps, brands, campaigns, and business systems for growing companies.",
+        content: "Websites, apps, branding, campaigns, and business systems for growing companies.",
       },
       { property: "og:title", content: "Fruition Innovix" },
       {
         property: "og:description",
-        content:
-          "Technology, branding, and growth support shaped around real business outcomes.",
+        content: "Technology, branding, and growth support for real outcomes.",
       },
       { property: "og:image", content: brandLogo },
     ],
@@ -72,7 +70,7 @@ export const Route = createFileRoute("/")({
 const specialties = [
   {
     title: "Website Development",
-    desc: "Fast, responsive websites built to explain, convert, and scale.",
+    desc: "Fast sites. Clear message. Conversion ready.",
     Icon: Monitor,
     color: "oklch(0.55 0.18 250)",
     glow: "oklch(0.55 0.18 250 / 0.35)",
@@ -80,7 +78,7 @@ const specialties = [
   },
   {
     title: "Mobile App Development",
-    desc: "Android and iOS apps with clear flows and reliable performance.",
+    desc: "Android and iOS. Clean flows. Stable performance.",
     Icon: Smartphone,
     color: "oklch(0.60 0.17 200)",
     glow: "oklch(0.60 0.17 200 / 0.35)",
@@ -88,7 +86,7 @@ const specialties = [
   },
   {
     title: "Custom Software Development",
-    desc: "Workflow tools that reduce manual effort and improve control.",
+    desc: "Workflow tools. Less manual effort. More control.",
     Icon: Code2,
     color: "oklch(0.55 0.15 170)",
     glow: "oklch(0.55 0.15 170 / 0.35)",
@@ -96,7 +94,7 @@ const specialties = [
   },
   {
     title: "Billing Software Solutions",
-    desc: "Billing and inventory systems designed for everyday accuracy.",
+    desc: "Billing, inventory, invoices, accuracy.",
     Icon: Briefcase,
     color: "oklch(0.68 0.16 95)",
     glow: "oklch(0.68 0.16 95 / 0.35)",
@@ -104,7 +102,7 @@ const specialties = [
   },
   {
     title: "ERP & CRM Solutions",
-    desc: "Connected systems for teams, customers, stock, and reporting.",
+    desc: "Teams, customers, stock, reports. Connected.",
     Icon: Database,
     color: "oklch(0.58 0.16 250)",
     glow: "oklch(0.58 0.16 250 / 0.35)",
@@ -112,7 +110,7 @@ const specialties = [
   },
   {
     title: "Graphic Design & Branding",
-    desc: "Identity, packaging, and creatives that make the brand easier to trust.",
+    desc: "Identity, packaging, creatives, brand trust.",
     Icon: Palette,
     color: "oklch(0.60 0.18 320)",
     glow: "oklch(0.60 0.18 320 / 0.35)",
@@ -120,7 +118,7 @@ const specialties = [
   },
   {
     title: "Digital Marketing",
-    desc: "SEO, ads, and campaigns focused on qualified enquiries.",
+    desc: "SEO, ads, campaigns, qualified enquiries.",
     Icon: TrendingUp,
     color: "oklch(0.65 0.16 140)",
     glow: "oklch(0.65 0.16 140 / 0.35)",
@@ -128,7 +126,7 @@ const specialties = [
   },
   {
     title: "Social Media Marketing",
-    desc: "Consistent content and campaigns for better audience recall.",
+    desc: "Consistent content. Better recall.",
     Icon: Megaphone,
     color: "oklch(0.62 0.14 290)",
     glow: "oklch(0.62 0.14 290 / 0.35)",
@@ -136,7 +134,7 @@ const specialties = [
   },
   {
     title: "Ecommerce Marketing",
-    desc: "Store, marketplace, and conversion support for online sales.",
+    desc: "Stores, marketplaces, conversions, sales.",
     Icon: ShoppingCart,
     color: "oklch(0.78 0.16 82)",
     glow: "oklch(0.78 0.16 82 / 0.35)",
@@ -144,7 +142,7 @@ const specialties = [
   },
   {
     title: "Product Photography & Video Editing",
-    desc: "Product photos, reels, and videos made for digital selling.",
+    desc: "Photos, reels, promos, digital selling.",
     Icon: Video,
     color: "oklch(0.62 0.15 30)",
     glow: "oklch(0.62 0.15 30 / 0.35)",
@@ -152,7 +150,7 @@ const specialties = [
   },
   {
     title: "Business Consulting",
-    desc: "Practical guidance for offers, systems, operations, and growth.",
+    desc: "Offers, systems, operations, growth.",
     Icon: BarChart3,
     color: "oklch(0.65 0.18 300)",
     glow: "oklch(0.65 0.18 300 / 0.35)",
@@ -164,22 +162,22 @@ const why = [
   {
     k: "01",
     t: "One Accountable Team",
-    d: "Strategy, build, content, and growth work stay connected from day one.",
+    d: "Strategy, build, content, growth. Connected from day one.",
   },
   {
     k: "02",
     t: "Clear Custom Plans",
-    d: "We shape the roadmap around your market, budget, timeline, and goals.",
+    d: "Market, budget, timeline, goals. Then the roadmap.",
   },
   {
     k: "03",
     t: "Modern Execution",
-    d: "Useful tools, sharp visuals, and measurable campaigns without clutter.",
+    d: "Useful tools, sharp visuals, measurable campaigns.",
   },
   {
     k: "04",
     t: "Result Focus",
-    d: "Every decision is tied to visibility, leads, sales, efficiency, or trust.",
+    d: "Visibility, leads, sales, efficiency, trust.",
   },
 ];
 
@@ -187,7 +185,7 @@ const portfolioItems = [
   {
     title: "Technology Solutions",
     stack: ["Websites", "Mobile Apps", "ERP / CRM"],
-    desc: "Websites, apps, dashboards, billing tools, ERP, CRM, and automation.",
+    desc: "Websites, apps, dashboards, billing, ERP, CRM, automation.",
     type: "What We Deliver",
     color: "oklch(0.55 0.18 250)",
     Icon: Monitor,
@@ -196,7 +194,7 @@ const portfolioItems = [
   {
     title: "Creative Branding",
     stack: ["Logo Design", "Identity", "Packaging"],
-    desc: "Logo systems, visual identity, packaging, and campaign creatives.",
+    desc: "Logos, identity, packaging, campaign creatives.",
     type: "What We Deliver",
     color: "oklch(0.60 0.17 200)",
     Icon: Palette,
@@ -205,7 +203,7 @@ const portfolioItems = [
   {
     title: "Digital Marketing Excellence",
     stack: ["SEO", "Google Ads", "Meta Ads"],
-    desc: "Search, ads, social campaigns, and lead-generation funnels.",
+    desc: "Search, ads, social campaigns, lead funnels.",
     type: "What We Deliver",
     color: "oklch(0.55 0.15 170)",
     Icon: TrendingUp,
@@ -214,7 +212,7 @@ const portfolioItems = [
   {
     title: "Business Growth Strategies",
     stack: ["Sales Funnels", "Consulting", "Revenue Plans"],
-    desc: "Revenue plans, sales funnels, and operational consulting.",
+    desc: "Revenue plans, sales funnels, operations consulting.",
     type: "What We Deliver",
     color: "oklch(0.78 0.16 82)",
     Icon: BarChart3,
@@ -223,7 +221,7 @@ const portfolioItems = [
   {
     title: "Ecommerce Success",
     stack: ["Online Stores", "Marketplaces", "Conversions"],
-    desc: "Store builds, marketplace tuning, product promotion, and conversion fixes.",
+    desc: "Store builds, marketplace tuning, promotions, conversion fixes.",
     type: "What We Deliver",
     color: "oklch(0.65 0.16 140)",
     Icon: ShoppingCart,
@@ -232,7 +230,7 @@ const portfolioItems = [
   {
     title: "Visual Content Creation",
     stack: ["Photography", "Videos", "Reels"],
-    desc: "Photography, promos, reels, and edited assets for campaigns.",
+    desc: "Photography, promos, reels, campaign edits.",
     type: "What We Deliver",
     color: "oklch(0.60 0.18 320)",
     Icon: Video,
@@ -241,7 +239,7 @@ const portfolioItems = [
   {
     title: "End-to-End Support",
     stack: ["Planning", "Development", "Growth"],
-    desc: "Planning, launch, measurement, and ongoing improvement.",
+    desc: "Planning, launch, measurement, improvement.",
     type: "What We Deliver",
     color: "oklch(0.65 0.18 300)",
     Icon: Rocket,
@@ -252,32 +250,32 @@ const portfolioItems = [
 const processSteps = [
   {
     t: "Understand",
-    d: "Clarify goals, market, blockers, and priorities.",
+    d: "Goals, market, blockers, priorities.",
     Icon: Search,
   },
   {
     t: "Strategize",
-    d: "Create a focused roadmap with the right work first.",
+    d: "Focused roadmap. Right work first.",
     Icon: Rocket,
   },
   {
     t: "Build",
-    d: "Design, develop, write, launch, and connect.",
+    d: "Design, develop, write, launch, connect.",
     Icon: Palette,
   },
   {
     t: "Grow",
-    d: "Improve campaigns, systems, and conversion paths.",
+    d: "Campaigns, systems, conversion paths.",
     Icon: Code2,
   },
   {
     t: "Modernize",
-    d: "Keep tools, content, and brand assets current.",
+    d: "Current tools, content, brand assets.",
     Icon: Globe,
   },
   {
     t: "Perform",
-    d: "Track visibility, leads, sales, and efficiency.",
+    d: "Visibility, leads, sales, efficiency.",
     Icon: BarChart3,
   },
 ];
@@ -304,27 +302,27 @@ const techLogos = [
 const valuePillars = [
   {
     title: "Modernization",
-    desc: "Systems and campaigns stay current without unnecessary complexity.",
+    desc: "Current systems. Lean complexity.",
     Icon: Globe,
   },
   {
     title: "Ingenuity",
-    desc: "Creative choices are practical, memorable, and easy to use.",
+    desc: "Practical, memorable, easy to use.",
     Icon: PenTool,
   },
   {
     title: "Excellence",
-    desc: "Details, delivery, and polish matter at every step.",
+    desc: "Detail, delivery, polish.",
     Icon: Star,
   },
   {
     title: "Integrity",
-    desc: "Transparent plans, clear updates, and accountable delivery.",
+    desc: "Transparent plans. Clear updates.",
     Icon: Layers,
   },
   {
     title: "Performance",
-    desc: "Work is measured by outcomes, not activity.",
+    desc: "Outcomes over activity.",
     Icon: BarChart3,
   },
 ];
@@ -332,61 +330,61 @@ const valuePillars = [
 const industries = [
   {
     label: "Retail & Ecommerce",
-    desc: "Stores, campaigns, product pages, and customer engagement.",
+    desc: "Stores, campaigns, product pages, engagement.",
     Icon: ShoppingCart,
     img: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Manufacturing",
-    desc: "ERP, inventory, billing, process automation, and reporting.",
+    desc: "ERP, inventory, billing, automation, reporting.",
     Icon: Briefcase,
     img: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Healthcare",
-    desc: "Websites, systems, and campaigns for care and wellness brands.",
+    desc: "Websites, systems, care and wellness campaigns.",
     Icon: Phone,
     img: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Education",
-    desc: "Digital tools and campaigns for institutes and training brands.",
+    desc: "Digital tools for institutes and training brands.",
     Icon: Monitor,
     img: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Real Estate",
-    desc: "Property presentation, lead funnels, and online visibility.",
+    desc: "Property showcases, lead funnels, visibility.",
     Icon: MapPin,
     img: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Restaurants & Hospitality",
-    desc: "Menus, local campaigns, booking flows, and social content.",
+    desc: "Menus, local campaigns, bookings, social content.",
     Icon: Star,
     img: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Fashion & Apparel",
-    desc: "Brand visuals, ecommerce, product content, and performance ads.",
+    desc: "Brand visuals, ecommerce, product content, ads.",
     Icon: Palette,
     img: "https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Startups & Entrepreneurs",
-    desc: "Identity, website, launch plan, and early growth support.",
+    desc: "Identity, website, launch plan, early growth.",
     Icon: Rocket,
     img: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Service-Based Businesses",
-    desc: "Credibility pages, enquiry flows, reviews, and lead campaigns.",
+    desc: "Credibility pages, enquiry flows, reviews, leads.",
     Icon: Megaphone,
     img: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
   {
     label: "Corporate Organizations",
-    desc: "Scalable systems, brand assets, and transformation support.",
+    desc: "Scalable systems, brand assets, transformation support.",
     Icon: Database,
     img: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=500",
   },
@@ -457,8 +455,8 @@ function Index() {
               </div>
               <div className="hero-copy-panel md:border-l md:border-[var(--gold)]/20 md:pl-8 lg:pl-10">
                 <p className="mx-auto max-w-[44rem] text-sm leading-relaxed text-foreground/78 sm:text-lg md:mx-0">
-                  We build websites, apps, brand systems, campaigns, and business tools that help
-                  teams look credible, work faster, and win better enquiries.
+                  Websites. Apps. Brand systems. Campaigns. Business tools. Built for trust, speed,
+                  and enquiries.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-4 md:justify-start">
                   <a
@@ -489,8 +487,8 @@ function Index() {
                 — Who We Are
               </div>
               <h2 className="font-display text-5xl md:text-6xl mb-6 leading-tight">
-                Empowering businesses for the{" "}
-                <span className="italic text-gold-gradient">digital future</span>.
+                Digital products. Brand systems.{" "}
+                <span className="italic text-gold-gradient">Growth engines</span>.
               </h2>
               <BrandDivider />
             </div>
@@ -527,12 +525,10 @@ function Index() {
             <Reveal delay={160}>
               <div className="w-full max-w-[43rem]">
                 <p className="text-xl font-semibold leading-relaxed text-foreground/88 sm:text-2xl">
-                  We turn ideas into useful digital products, memorable brand assets, and clear
-                  growth actions.
+                  Useful products. Memorable brands. Clear growth actions.
                 </p>
                 <p className="mt-7 text-base font-medium leading-relaxed text-muted-foreground sm:text-xl">
-                  One team plans the message, builds the system, launches the campaign, and keeps
-                  improving the result.
+                  One team. Message, system, campaign, improvement.
                 </p>
 
                 <div className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -540,22 +536,22 @@ function Index() {
                     {
                       k: "01",
                       t: "Digital Products",
-                      d: "Websites, mobile apps, ERP, CRM, billing systems, and custom software built for daily use.",
+                      d: "Websites, apps, ERP, CRM, billing, custom software.",
                     },
                     {
                       k: "02",
                       t: "Brand Identity",
-                      d: "Logo systems, packaging, graphic design, product visuals, and campaigns that make the brand easier to trust.",
+                      d: "Logos, packaging, graphics, product visuals, campaigns.",
                     },
                     {
                       k: "03",
                       t: "Growth Marketing",
-                      d: "SEO, ads, social media, ecommerce marketing, and performance plans focused on leads and sales.",
+                      d: "SEO, ads, social, ecommerce, leads, sales.",
                     },
                     {
                       k: "04",
                       t: "Business Guidance",
-                      d: "Planning, process improvement, automation ideas, and long-term support for sustainable growth.",
+                      d: "Planning, process fixes, automation, long-term support.",
                     },
                   ].map((item) => (
                     <article
@@ -593,7 +589,7 @@ function Index() {
               <h2 className="font-display text-5xl md:text-6xl mb-4">Our Core Services</h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
-                Focused service lines for launch, operations, visibility, and sales.
+                Launch. Operations. Visibility. Sales.
               </p>
             </div>
           </Reveal>
@@ -687,7 +683,7 @@ function Index() {
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-base italic font-display">
-                Modern tools, clear creative decisions, and measurable execution.
+                Modern tools. Clear creative calls. Measurable execution.
               </p>
             </div>
           </Reveal>
@@ -867,7 +863,7 @@ function Index() {
               </h2>
               <BrandDivider />
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                Helping businesses achieve sustainable growth through smart digital solutions.
+                Sustainable growth through smart digital execution.
               </p>
             </div>
           </Reveal>
@@ -909,8 +905,7 @@ function Index() {
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-[var(--brand-cream)]/90 text-lg md:text-xl italic font-display mt-4">
-                From business websites to automation, branding, marketing, ecommerce, and
-                consulting.
+                Websites. Automation. Branding. Marketing. Ecommerce. Consulting.
               </p>
             </div>
           </Reveal>
@@ -1055,9 +1050,7 @@ function Index() {
                 <BrandDivider />
               </div>
               <p className="max-w-2xl mx-auto text-foreground/75 text-lg leading-relaxed mb-10">
-                Whether you are launching a startup, expanding your business, modernizing
-                operations, or building a stronger brand, Fruition Innovix becomes an extension of
-                your business.
+                Startup launch. Business expansion. Operations upgrade. Stronger brand.
               </p>
 
               <a
@@ -1100,14 +1093,13 @@ function Index() {
                 — More Than a Service Provider
               </div>
               <h2 className="font-display text-5xl md:text-6xl mb-4 text-gold-gradient">
-                We work alongside your business
+                Alongside your business
               </h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-[var(--brand-cream)]/90 text-lg md:text-xl italic font-display mt-4">
-                Understand your goals.
+                Goals understood.
                 <br />
-                Solve challenges, identify opportunities, and create strategies for sustainable
-                success.
+                Challenges solved. Opportunities mapped. Growth strategy ready.
               </p>
             </div>
           </Reveal>
@@ -1176,8 +1168,7 @@ function Index() {
               </h2>
               <BrandDivider />
               <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
-                We help businesses streamline operations, strengthen brand presence, and achieve
-                sustainable growth across a wide range of industries.
+                Streamlined operations. Stronger brand presence. Sustainable growth.
               </p>
             </div>
           </Reveal>
@@ -1222,8 +1213,7 @@ function Index() {
           </div>
           <Reveal delay={260}>
             <p className="mx-auto mt-12 max-w-3xl text-center text-lg leading-relaxed text-[var(--brand-cream)]/85">
-              No matter your industry, Fruition Innovix delivers customized solutions designed to
-              help your business innovate, grow, and succeed.
+              Any industry. Custom solution. Innovation, growth, success.
             </p>
           </Reveal>
         </div>
@@ -1243,8 +1233,7 @@ function Index() {
               <h2 className="font-display text-5xl md:text-6xl mb-4">From idea to success</h2>
               <BrandDivider />
               <p className="max-w-2xl mx-auto text-muted-foreground text-lg mt-4">
-                We understand, strategize, build, and continuously optimize your business for
-                long-term growth.
+                Understand. Strategize. Build. Optimize. Grow.
               </p>
             </div>
           </Reveal>
@@ -1307,19 +1296,19 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                q: "Fruition Innovix transformed our entire digital presence. Their web development team delivered a platform that exceeded every expectation we had.",
+                q: "Digital presence transformed. Website delivered clean, fast, and beyond expectations.",
                 n: "Rajesh Kumar",
                 c: "CEO, TechVentures · Chennai",
                 img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=120",
               },
               {
-                q: "The ERP system they built for our manufacturing unit saved countless hours of manual work. True professionals with deep expertise.",
+                q: "ERP that saved hours of manual work. Clear process. Strong execution.",
                 n: "Priya Sharma",
                 c: "Operations Head · Bangalore",
                 img: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=120",
               },
               {
-                q: "Our brand identity has never been stronger. Fruition Innovix understood our vision perfectly and delivered branding that commands attention.",
+                q: "Sharper identity. Better recall. Branding that finally feels like us.",
                 n: "Anand Krishnan",
                 c: "Founder, RetailHub · Mumbai",
                 img: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=120",
@@ -1394,16 +1383,15 @@ function Index() {
                 — Contact Us —
               </div>
               <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6">
-                <span className="text-gold-gradient">Let's build your digital future</span>
+                <span className="text-gold-gradient">Digital future</span>
                 <br />
-                together.
+                built right.
               </h2>
               <div className="mx-auto my-6">
                 <BrandDivider />
               </div>
               <p className="max-w-2xl mx-auto text-foreground/75 text-lg leading-relaxed">
-                Share your idea, business challenge, or growth goal. We will help you shape the
-                right technology, branding, marketing, and consulting plan.
+                Idea. Challenge. Growth goal. Plan the right next move.
               </p>
             </div>
           </Reveal>
@@ -1605,7 +1593,7 @@ function Index() {
             <br />
             Innovate • Elevate • Accelerate.
             <br />
-            Empowering Businesses with Future-Ready Technology and Strategic Excellence.
+            Future-ready technology. Strategic execution.
           </div>
         </div>
       </footer>
